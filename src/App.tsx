@@ -1,7 +1,13 @@
-import React from 'react'
+import { Header } from './modules/Header'
+import { Footer } from './modules/Footer'
+import { AppRouter } from './router'
 
-const App = () => {
-    return <h1>Hellow world!</h1>
+export const App = () => {
+    return (
+        <>
+            <Header />
+            <AppRouter />
+            <Footer />
+        </>
+    )
 }
-
-export default App
