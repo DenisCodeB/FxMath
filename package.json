@@ -24,7 +24,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "lint": "eslint . --ext .ts",
+        "lint": "eslint . --ext .tsx,.ts",
         "sb": "start-storybook -p 6006 -s public",
         "build-sb": "build-storybook -s public"
     },

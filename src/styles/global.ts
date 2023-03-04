@@ -11,10 +11,9 @@ export default createGlobalStyle`
         padding: 0;
         outline: 0;
         box-sizing: border-box;
-        background-color: var(--main-background-color);
     }
 
     body {
-        background-color: var(--main-background-color);
+        background-color: greenyellow;
     }
 `
