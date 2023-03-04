@@ -5,7 +5,6 @@ import { AppRouter } from './router'
 import GlobalStyles from './styles/global'
 
 export const App = () => {
-    console.log(1)
     return (
         <>
             <BrowserRouter>
