@@ -1,4 +1,7 @@
-FROM node
+FROM node:19.7.0
+
 WORKDIR /app
-RUN npm i
-RUN npm run build
+
+COPY package.json .
+
+RUN npm install --legacy-peer-deps
