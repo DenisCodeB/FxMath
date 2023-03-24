@@ -1,13 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
+import PageWrapper from '../../modules/PageWrapper/PageWrapper'
 import Button from '../../ui/Button/Button'
+
+const StyledHome = styled.main`
+    width: 100%;
+    margin-top: 5rem;
+`
 
 export const Home = () => {
     return (
-        <main id="main">
-            <h1>Home</h1>
-            <Button variant="primary" onClick={() => alert(1)}>
-                CLICK
-            </Button>
-        </main>
+        <StyledHome id="main">
+            <PageWrapper>
+                <h1>Home</h1>
+            </PageWrapper>
+        </StyledHome>
     )
 }

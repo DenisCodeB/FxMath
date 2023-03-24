@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PageWrapper from '../PageWrapper/PageWrapper'
 
 const StyledFooter = styled.footer`
     width: 100%;
@@ -7,8 +8,10 @@ const StyledFooter = styled.footer`
 
 export const Footer = () => {
     return (
-        <StyledFooter>
-            <div>Footer</div>
+        <StyledFooter id="footer">
+            <PageWrapper>
+                <div>Footer</div>
+            </PageWrapper>
         </StyledFooter>
     )
 }
