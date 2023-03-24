@@ -1,5 +1,6 @@
 import { HTMLProps, ReactNode } from 'react'
 import styled from 'styled-components'
+import { primaryButtonStyle } from './styles'
 
 export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
     children?: ReactNode
@@ -11,10 +12,7 @@ export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
 }
 
 const StyledButton = styled.button<IButtonProps>`
-    background-color: var(--prymary-btn-background-color);
-    border: 1px solid blue;
-    padding: 1rem;
-    width: 5rem;
+    ${({ variant }) => (variant === 'primary' ? primaryButtonStyle : false)}
 `
 
 const Button = ({
