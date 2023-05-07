@@ -2,20 +2,41 @@ import { css } from "styled-components";
 import { flexCentralize } from "../../styles/templates";
 
 const primaryButtonStyle = css`
-    background-color: var(--prymary-btn-background-1);
+    background-color: var(--transparent);
+    border: var(--primary-btn-border);
+    box-shadow: var(--first-box-shadow);
+    font-size: var(--fs-25);
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+
+    &:hover {
+        svg {
+            transform: translateX(0.2rem);
+        }
+    }
+
+    svg {
+        margin-top: 0.2rem;
+        transition: all .1s linear;
+        width: 1.75rem;
+    }
+`
+
+const secondaryButtonStyle = css`
+    background-color: var(--secondary-btn-background-1);
     padding: 0.5rem 0.75rem;
     border: none;
-    border-radius: var(--radius-10);
-    font-size: var(--fs-18);
-    font-family: Lato;
-    font-weight: normal;
+    font-size: var(--fs-16);
     color: var(--fourth-text-color);
-    ${flexCentralize};
     flex-direction: row-reverse;
-    gap: 0.5rem;
-    cursor: pointer;
+    gap: 0.375rem;
+
+    svg {
+        width: 0.875rem;
+    }
 `
 
 export {
     primaryButtonStyle,
+    secondaryButtonStyle,
 }

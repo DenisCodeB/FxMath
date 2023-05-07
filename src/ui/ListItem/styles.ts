@@ -5,14 +5,14 @@ const navItemsStyle = css`
     font-size: var(--fs-18);
     font-family: Lato;
     font-weight: normal;
-    color: var(--secondary-text-color);
+    color: var(--second-text-color);
 
     & a {
         transition: all 0.1s linear;
         text-decoration: none;
 
         &:visited {
-            color: var(--secondary-text-color);
+            color: var(--second-text-color);
         }
         &:active,
         &:hover {

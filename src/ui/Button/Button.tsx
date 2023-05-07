@@ -1,6 +1,7 @@
 import { HTMLProps, ReactNode } from 'react'
 import styled from 'styled-components'
-import { primaryButtonStyle } from './styles'
+import { primaryButtonStyle, secondaryButtonStyle } from './styles'
+import { flexCentralize } from '../../styles/templates'
 
 export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
     children?: ReactNode
@@ -8,11 +9,18 @@ export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
     type?: 'button' | 'reset' | 'submit' | undefined
     disabled?: boolean
     variant: 'primary' | 'secondary'
-    text?: string
+    text: string
 }
 
 const StyledButton = styled.button<IButtonProps>`
-    ${({ variant }) => (variant === 'primary' ? primaryButtonStyle : false)}
+    ${flexCentralize}
+    cursor: pointer;
+    border-radius: var(--radius-10);
+    font-family: var(--ff-L);
+    font-weight: normal;
+
+    ${({ variant }) =>
+        variant === 'primary' ? primaryButtonStyle : secondaryButtonStyle}
 `
 
 const Button = ({
@@ -21,7 +29,6 @@ const Button = ({
     type = 'button',
     disabled,
     variant = 'primary',
-    text,
     ref,
     as,
     ...props
@@ -34,7 +41,7 @@ const Button = ({
             variant={variant}
             {...props}
         >
-            {text}
+            {props.text}
             {children}
         </StyledButton>
     )
