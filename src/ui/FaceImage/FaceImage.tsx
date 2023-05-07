@@ -1,5 +1,6 @@
 import { HTMLProps } from 'react'
 import styled, { FlattenSimpleInterpolation } from 'styled-components'
+import { backgroundDefault } from '../../styles/templates'
 
 interface IFaceImage extends HTMLProps<HTMLDivElement> {
     url: string
@@ -8,9 +9,7 @@ interface IFaceImage extends HTMLProps<HTMLDivElement> {
 
 const StyledFaceImage = styled.div<IFaceImage>`
     background-image: url(${({ url }) => url});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    ${backgroundDefault}
     ${({ variantStyle }) => variantStyle}
 `
 
