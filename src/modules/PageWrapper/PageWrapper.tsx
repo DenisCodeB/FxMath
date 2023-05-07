@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import { ReactNode } from 'react'
+import styled from 'styled-components'
 
 interface IPageWrapper {
     children: ReactNode
@@ -14,7 +14,11 @@ const StyledPageWrapper = styled.div`
 `
 
 const PageWrapper = ({ children }: IPageWrapper) => {
-    return <StyledPageWrapper>{children}</StyledPageWrapper>
+    return (
+        <StyledPageWrapper className='page-wrapper'>
+            {children}
+        </StyledPageWrapper>
+    )
 }
 
 export default PageWrapper

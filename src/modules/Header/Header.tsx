@@ -1,17 +1,16 @@
-import { ReactNode, HTMLProps } from 'react'
 import styled from 'styled-components'
 import NavBar from '../../components/NavBar/NavBar'
-import Button from '../../ui/Button/Button'
 import Logo from '../../ui/Logo/Logo'
 import PageWrapper from '../PageWrapper/PageWrapper'
 
 const StyledHeader = styled.header`
     width: 100%;
     position: fixed;
-    height: 5rem;
+    height: 4rem;
     top: 0;
     left: 0;
-    background-color: var(--transparent);
+    background-color: var(--main-background-color);
+    z-index: 9999;
 `
 
 const HeaderContent = styled.div`
@@ -21,9 +20,9 @@ const HeaderContent = styled.div`
     align-items: center;
 `
 
-export const Header = () => {
+const Header = () => {
     return (
-        <StyledHeader id="header">
+        <StyledHeader id='header'>
             <PageWrapper>
                 <HeaderContent>
                     <Logo />
@@ -33,3 +32,5 @@ export const Header = () => {
         </StyledHeader>
     )
 }
+
+export default Header

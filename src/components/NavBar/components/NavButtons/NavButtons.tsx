@@ -10,7 +10,7 @@ const ButtonsWrap = styled.div`
 const NavButtons = () => {
     return (
         <ButtonsWrap>
-            <Button variant="primary" text="Practice">
+            <Button variant='secondary' text='Practice'>
                 <CalculationSvg />
             </Button>
         </ButtonsWrap>

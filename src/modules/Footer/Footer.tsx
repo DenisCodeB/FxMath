@@ -6,7 +6,7 @@ const StyledFooter = styled.footer`
     height: 3rem;
 `
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <StyledFooter id="footer">
             <PageWrapper>
@@ -15,3 +15,5 @@ export const Footer = () => {
         </StyledFooter>
     )
 }
+
+export default Footer

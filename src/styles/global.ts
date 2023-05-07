@@ -1,21 +1,45 @@
 import { createGlobalStyle } from "styled-components"
-import LatoWoff from '../assets/fonts/Lato.woff2'
+import LatoTTF from '../assets/fonts/Lato.ttf'
+import LatoWOFF from '../assets/fonts/Lato.woff'
+import LatoWOFF2 from '../assets/fonts/Lato.woff2'
+import MontserratTTF from '../assets/fonts/Montserrat-Bold.ttf'
+import MontserratWOFF from '../assets/fonts/Montserrat-Bold.woff'
+import MontserratWOFF2 from '../assets/fonts/Montserrat-Bold.woff2'
 
 export default createGlobalStyle`
     :root {
+        // background colors
         --transparent: transparent;
-        --border-dev: 1px solid red;
-        --radius-10: 0.625rem;
-
         --main-background-color: hsl(0, 0%, 97%);
+        --secondary-btn-background-1: hsl(240, 100%, 70%);
+
+        // text colors
         --first-text-color: hsl(0, 0%, 15%);
-        --secondary-text-color: hsl(0, 0%, 30%);
+        --second-text-color: hsl(0, 0%, 30%);
         --third-text-color: hsl(0, 0%, 50%);
         --fourth-text-color: hsl(0, 0%, 95%);
-        --prymary-btn-background-1: hsl(240, 100%, 70%);
 
+        // font families
+        --ff-L: Lato, sans-serif;
+        --ff-M: Montserrat-Bold, sans-serif;
+
+        // font sizes
+        --fs-16: 16px;
         --fs-18: 18px;
         --fs-20: 20px;
+        --fs-25: 25px;
+        --fs-70: 70px;
+
+        // borders
+        --border-dev: 1px solid red;
+        --primary-btn-border: 1px solid hsl(0, 0%, 50%);
+
+        // border radiuses
+        --radius-10: 0.625rem; 
+
+        // box shadows
+        --first-box-shadow: 0 0 5px 0 hsla(300, 100%, 50%, 0.5);
+
     }
 
     * {
@@ -32,6 +56,16 @@ export default createGlobalStyle`
     @font-face {
         font-family: Lato;
         font-weight: normal;
-        src: url(${LatoWoff}) format('woff2');
+        src: url(${LatoWOFF2}) format('woff2'),
+            url(${LatoWOFF}) format('woff'),
+            url(${LatoTTF}) format('truetype');
+    }
+    
+    @font-face {
+        font-family: Montserrat-Bold;
+        font-weight: bold;
+        src: url(${MontserratWOFF2}) format('woff2'),
+            url(${MontserratWOFF}) format('woff'),
+            url(${MontserratTTF}) format('truetype');
     }
 `
