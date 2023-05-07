@@ -7,7 +7,7 @@ interface IH1 {
 
 const StyledH1 = styled.h1`
     font-size: var(--fs-70);
-    font-family: var(--ff-M);
+    font-family: var(--ff-M-b);
     font-weight: bold;
     color: var(--first-text-color);
 `

@@ -2,9 +2,12 @@ import { createGlobalStyle } from "styled-components"
 import LatoTTF from '../assets/fonts/Lato.ttf'
 import LatoWOFF from '../assets/fonts/Lato.woff'
 import LatoWOFF2 from '../assets/fonts/Lato.woff2'
-import MontserratTTF from '../assets/fonts/Montserrat-Bold.ttf'
-import MontserratWOFF from '../assets/fonts/Montserrat-Bold.woff'
-import MontserratWOFF2 from '../assets/fonts/Montserrat-Bold.woff2'
+import MontserratTTF from '../assets/fonts/Montserrat.ttf'
+import MontserratWOFF from '../assets/fonts/Montserrat.woff'
+import MontserratWOFF2 from '../assets/fonts/Montserrat.woff2'
+import Montserrat_B_TTF from '../assets/fonts/Montserrat-Bold.ttf'
+import Montserrat_B_WOFF from '../assets/fonts/Montserrat-Bold.woff'
+import Montserrat_B_WOFF2 from '../assets/fonts/Montserrat-Bold.woff2'
 
 export default createGlobalStyle`
     :root {
@@ -21,7 +24,8 @@ export default createGlobalStyle`
 
         // font families
         --ff-L: Lato, sans-serif;
-        --ff-M: Montserrat-Bold, sans-serif;
+        --ff-M: Montserrat, sans-serif;
+        --ff-M-b: Montserrat-Bold, sans-serif;
 
         // font sizes
         --fs-16: 16px;
@@ -64,6 +68,14 @@ export default createGlobalStyle`
     @font-face {
         font-family: Montserrat-Bold;
         font-weight: bold;
+        src: url(${Montserrat_B_WOFF2}) format('woff2'),
+            url(${Montserrat_B_WOFF}) format('woff'),
+            url(${Montserrat_B_TTF}) format('truetype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: normal;
         src: url(${MontserratWOFF2}) format('woff2'),
             url(${MontserratWOFF}) format('woff'),
             url(${MontserratTTF}) format('truetype');
