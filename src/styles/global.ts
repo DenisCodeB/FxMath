@@ -14,6 +14,7 @@ export default createGlobalStyle`
         // background colors
         --transparent: transparent;
         --main-background-color: hsl(0, 0%, 97%);
+        --second-background-color: hsl(0, 0%, 98%);
         --secondary-btn-background-1: hsl(240, 100%, 70%);
 
         // text colors
@@ -23,6 +24,7 @@ export default createGlobalStyle`
         --fourth-text-color: hsl(0, 0%, 95%);
 
         // font families
+        --ff-V: Verdana, sans-serif; 
         --ff-L: Lato, sans-serif;
         --ff-M: Montserrat, sans-serif;
         --ff-M-b: Montserrat-Bold, sans-serif;
@@ -40,10 +42,12 @@ export default createGlobalStyle`
 
         // border radiuses
         --radius-10: 0.625rem; 
+        --radius-30: 1.875rem;
+        --radius-50: 3.125rem;
 
         // box shadows
         --first-box-shadow: 0 0 5px 0 hsla(300, 100%, 50%, 0.5);
-
+        --second-box-shadow: 0 0 30px hsla(0, 0%, 0%, 0.05);
     }
 
     * {
