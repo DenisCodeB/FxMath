@@ -22,6 +22,9 @@ export default createGlobalStyle`
         --second-text-color: hsl(0, 0%, 30%);
         --third-text-color: hsl(0, 0%, 50%);
         --fourth-text-color: hsl(0, 0%, 95%);
+        --spec-1-text-color: hsl(252, 76%, 74%);
+        --spec-2-text-color: hsl(20, 56%, 53%);
+        --spec-3-text-color: hsl(255, 80%, 57%);
 
         // font families
         --ff-V: Verdana, sans-serif; 
@@ -34,6 +37,8 @@ export default createGlobalStyle`
         --fs-18: 18px;
         --fs-20: 20px;
         --fs-25: 25px;
+        --fs-40: 40px;
+        --fs-50: 50px;
         --fs-70: 70px;
 
         // borders

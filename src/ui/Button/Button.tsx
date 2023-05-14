@@ -25,10 +25,10 @@ const StyledButton = styled.button<IButtonProps>`
 
 const Button = ({
     children,
-    className = 'hello',
+    className,
     type = 'button',
     disabled,
-    variant = 'primary',
+    variant,
     ref,
     as,
     ...props
