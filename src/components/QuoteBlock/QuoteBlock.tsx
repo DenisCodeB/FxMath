@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import Quote from './children/Quote/Quote'
 import { flexCentralize } from '../../styles/templates'
+import HashHeading from '../../ui/HashHeading/HashHeading'
+import Quote from './children/Quote/Quote'
 
 const StyledQuoteBlock = styled.div`
     width: 100%;
@@ -18,12 +19,6 @@ const QuoteHeader = styled.div`
     width: 100%;
     border-bottom: var(--primary-btn-border);
     padding: 0.5rem;
-`
-
-const HashHeading = styled.span`
-    font-size: var(--fs-20);
-    font-family: var(--ff-M);
-    color: var(--third-text-color);
 `
 
 const QuoteBody = styled.div`

@@ -1,23 +1,43 @@
 import styled from 'styled-components'
 import Button from '../../ui/Button/Button'
-import Step from './children/Step/Step'
 import { ReactComponent as ArrowRightTwo } from '../../assets/images/ArrowRight2.svg'
+import Steps from './children/Steps/Steps'
+import { flexCentralize } from '../../styles/templates'
 
-const StyledStepsBlock = styled.div``
+const StyledStepsBlock = styled.div`
+    width: 100%;
+`
 
-const GetStartedWrap = styled.div``
+const Title = styled.h2`
+    font-family: var(--ff-M-b);
+    font-size: var(--fs-50);
+    color: var(--second-text-color);
+`
+
+const GetStarted = styled.div`
+    ${flexCentralize}
+    margin-top: 15rem;
+    flex-direction: column;
+    gap: 2rem;
+`
+
+const OpeningText = styled.p`
+    color: var(--second-text-color);
+    font-family: var(--ff-L);
+    font-size: var(--fs-20);
+`
 
 const StepsBlock = () => {
     return (
         <StyledStepsBlock>
-            {[1, 2, 3].map((elem, i) => (
-                <Step key={i} />
-            ))}
-            <GetStartedWrap>
+            <Title>How to get started?</Title>
+            <Steps />
+            <GetStarted>
+                <OpeningText>To begin our adventure,</OpeningText>
                 <Button variant='primary' text='Get Started'>
                     <ArrowRightTwo />
                 </Button>
-            </GetStartedWrap>
+            </GetStarted>
         </StyledStepsBlock>
     )
 }

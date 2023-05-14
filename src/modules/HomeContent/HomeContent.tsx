@@ -7,7 +7,7 @@ const StyledHomeContent = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 10rem;
+    gap: 15rem;
 `
 
 const HomeContent = () => {
