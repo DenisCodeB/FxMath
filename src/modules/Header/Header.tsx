@@ -11,6 +11,7 @@ const StyledHeader = styled.header`
     left: 0;
     background-color: var(--main-background-color);
     z-index: 9999;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
 `
 
 const HeaderContent = styled.div`

@@ -9,7 +9,6 @@ const StyledPageWrapper = styled.div`
     width: 100%;
     height: 100%;
     max-width: 1280px;
-    border: var(--border-dev);
     margin: 0 auto;
 `
 
