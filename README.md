@@ -41,14 +41,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Docker
 
-### `docker build . -t image_name`
+### `docker compose up`
 
-Build docker image. -t flag is docker image tag/name. Paste any name instead **image_name**.
+Builds, (re)creates, starts, and attaches to containers for a service. You can use flag `-d`, which means detached mode: run containers in the background.
 
-### `docker run -it -p 3000:3000 -v $PWD:/app --name container_name image_name bash`
+### `docker compose exec web bash`
 
-Create and start docker container from image. `-it bush` - interactive mode with commands in /app directory. `-p 3000:3000` - open host and container ports. `-v $PWD:/app` - mount your files into container (sharing code).
-
-### `npm run start`
-
-In /app, run the command.
+If you want to dive deeper, use it after. So you can see container files and run additional commands inside. 
