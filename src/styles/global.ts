@@ -37,6 +37,7 @@ export default createGlobalStyle`
         --fs-18: 18px;
         --fs-20: 20px;
         --fs-25: 25px;
+        --fs-30: 30px;
         --fs-40: 40px;
         --fs-50: 50px;
         --fs-70: 70px;
@@ -44,6 +45,8 @@ export default createGlobalStyle`
         // borders
         --border-dev: 1px solid red;
         --primary-btn-border: 1px solid hsl(0, 0%, 50%);
+        --second-btn-border: 1px solid hsl(0, 0%, 80%);
+
 
         // border radiuses
         --radius-10: 0.625rem; 
@@ -53,6 +56,7 @@ export default createGlobalStyle`
         // box shadows
         --first-box-shadow: 0 0 5px 0 hsla(300, 100%, 50%, 0.5);
         --second-box-shadow: 0 0 30px hsla(0, 0%, 0%, 0.05);
+        --third-box-shadow: 0 0 10px 0 hsla(240, 50%, 50%, 0.2);
     }
 
     * {

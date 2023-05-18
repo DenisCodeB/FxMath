@@ -34,7 +34,7 @@ const StepsBlock = () => {
             <Steps />
             <GetStarted>
                 <OpeningText>To begin our adventure,</OpeningText>
-                <Button variant='primary' text='Get Started'>
+                <Button variant='primary' className='big' text='Get Started'>
                     <ArrowRightTwo />
                 </Button>
             </GetStarted>

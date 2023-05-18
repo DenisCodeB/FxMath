@@ -8,8 +8,12 @@ const primaryButtonStyle = css`
     font-size: var(--fs-25);
     width: fit-content;
     padding: 0.5rem 1.5rem;
+    color: var(--first-text-color);
+    transition: all .15s linear;
 
     &:hover {
+        transform: scale(1.05);
+
         svg {
             transform: translateX(0.2rem);
         }
@@ -36,7 +40,18 @@ const secondaryButtonStyle = css`
     }
 `
 
+const bigButtonStyle = css`
+    font-family: var(--ff-M);
+    font-weight: bold;
+    font-size: var(--fs-25);
+    border: var(--second-btn-border); 
+    box-shadow: var(--third-box-shadow);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-30);
+`
+
 export {
     primaryButtonStyle,
     secondaryButtonStyle,
+    bigButtonStyle,
 }

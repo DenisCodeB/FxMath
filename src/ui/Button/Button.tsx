@@ -1,6 +1,10 @@
 import { HTMLProps, ReactNode } from 'react'
 import styled from 'styled-components'
-import { primaryButtonStyle, secondaryButtonStyle } from './styles'
+import {
+    bigButtonStyle,
+    primaryButtonStyle,
+    secondaryButtonStyle,
+} from './styles'
 import { flexCentralize } from '../../styles/templates'
 
 export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
@@ -21,6 +25,8 @@ const StyledButton = styled.button<IButtonProps>`
 
     ${({ variant }) =>
         variant === 'primary' ? primaryButtonStyle : secondaryButtonStyle}
+
+    ${({ className }) => className === 'big' && bigButtonStyle}
 `
 
 const Button = ({
