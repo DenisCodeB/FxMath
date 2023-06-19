@@ -1,0 +1,31 @@
+@use '../../../../styles/mixins/flex';
+
+.get-started {
+    @include flex.flexCentralize;
+
+    margin-top: 15rem;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__text {
+        color: var(--second-text-color);
+        font-family: var(--ff-L);
+        font-size: var(--fs-20);
+    }
+
+    & button {
+        transition: all 0.2s linear;
+
+        & img {
+            transition: all 0.2s linear;
+        }
+
+        &:hover {
+            transform: scale(1.03);
+
+            img {
+                transform: translateX(0.5rem);
+            }
+        }
+    }
+}

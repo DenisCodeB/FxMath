@@ -1,0 +1,63 @@
+.step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    transition: all .5s ease-out;
+
+    &__body {
+        width: 45%;
+    }
+
+    &__image {
+        width: 50%;
+        height: auto;
+        mix-blend-mode: multiply;
+    }
+
+    &_reversed {
+        flex-direction: row-reverse;
+    }
+
+    &_hidden {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+}
+
+.text {
+    margin-top: 2rem;
+    width: 90%;
+
+    &__action {
+        font-family: var(--ff-M);
+        font-size: var(--fs-40);
+        color: var(--second-text-color);
+        text-align: justify;
+    }
+
+    &__example {
+        margin-top: 1rem;
+        font-family: var(--ff-L);
+        font-size: var(--fs-18);
+        text-align: right;
+        color: var(--third-text-color);
+    }
+}
+
+.bold {
+    font-family: var(--ff-M-b);
+    font-weight: bold;
+
+    &_one {
+        color: var(--spec-1-text-color);
+    }
+
+    &_two {
+        color: var(--spec-2-text-color);
+    }
+
+    &_three {
+        color: var(--spec-3-text-color);
+    }
+}

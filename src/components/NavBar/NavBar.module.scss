@@ -1,0 +1,21 @@
+@use '../../styles/mixins/flex';
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.navbar {
+    @include flex.flexCentralize;
+    width: 80%;
+
+    &__list {
+        @include flex.flexCentralize;
+        width: 100%;
+        display: flex;
+        list-style: none;
+        overflow: hidden;
+        gap: 20%;
+    }
+}

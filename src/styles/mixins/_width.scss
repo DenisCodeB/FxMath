@@ -1,0 +1,4 @@
+@mixin ratio($ratio) {
+    width: $ratio;
+    height: $ratio;
+}

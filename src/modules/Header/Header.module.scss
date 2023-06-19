@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    position: fixed;
+    height: 4rem;
+    top: 0;
+    left: 0;
+    background-color: var(--main-background-color);
+    z-index: 9999;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+
+    &__content {
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

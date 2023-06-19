@@ -1,0 +1,24 @@
+@use '../../styles/mixins/text';
+
+.nav-items {
+    @include text.textStyle(
+        var(--fs-18),
+        var(--ff-L),
+        normal,
+        var(--second-text-color)
+    );
+    white-space: nowrap;
+
+    & a {
+        transition: all 0.1s linear;
+        text-decoration: none;
+
+        &:visited {
+            color: var(--second-text-color);
+        }
+        &:active,
+        &:hover {
+            color: var(--first-text-color);
+        }
+    }
+}

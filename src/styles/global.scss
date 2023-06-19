@@ -1,0 +1,55 @@
+:root {
+    // background colors
+    --transparent: transparent;
+    --main-background-color: hsl(0, 0%, 97%);
+    --second-background-color: hsl(0, 0%, 98%);
+    --secondary-btn-background-1: hsl(240, 100%, 70%);
+
+    // text colors
+    --first-text-color: hsl(0, 0%, 15%);
+    --second-text-color: hsl(0, 0%, 30%);
+    --third-text-color: hsl(0, 0%, 50%);
+    --fourth-text-color: hsl(0, 0%, 95%);
+    --spec-1-text-color: hsl(252, 76%, 74%);
+    --spec-2-text-color: hsl(20, 56%, 53%);
+    --spec-3-text-color: hsl(255, 80%, 57%);
+
+    // font families
+    --ff-V: Verdana, sans-serif;
+
+    // font sizes
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-20: 20px;
+    --fs-25: 25px;
+    --fs-30: 30px;
+    --fs-40: 40px;
+    --fs-50: 50px;
+    --fs-70: 70px;
+
+    // borders
+    --border-dev: 1px solid red;
+    --primary-btn-border: 1px solid hsl(0, 0%, 50%);
+    --second-btn-border: 1px solid hsl(0, 0%, 80%);
+
+    // border radiuses
+    --radius-10: 0.625rem;
+    --radius-30: 1.875rem;
+    --radius-50: 3.125rem;
+
+    // box shadows
+    --first-box-shadow: 0 0 5px 0 hsla(300, 100%, 50%, 0.5);
+    --second-box-shadow: 0 0 30px hsla(0, 0%, 0%, 0.05);
+    --third-box-shadow: 0 0 10px 0 hsla(240, 50%, 50%, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-background-color);
+}

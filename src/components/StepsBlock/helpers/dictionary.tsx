@@ -1,36 +1,11 @@
-import styled, { css } from 'styled-components'
 import Step1 from '../../../assets/images/Step1.png'
 import Step2 from '../../../assets/images/Step2.png'
 import Step3 from '../../../assets/images/Step3.png'
-import { IStepInfo } from '../children/Step/Step'
+import { IStepInfo } from '../components/types/types'
+import style from '../components/Step/Step.module.scss'
+import Emphasized from '@/ui/Emphasized/Emphasized'
 
 type StepsArray = Array<IStepInfo>
-
-interface IStyledBold {
-    variant: 'spec-1' | 'spec-2' | 'spec-3'
-}
-
-const StyledBold = styled.span<IStyledBold>`
-    font-family: var(--ff-M-b);
-    font-weight: bold;
-
-    ${({ variant }) => {
-        switch (true) {
-            case variant === 'spec-1':
-                return css`
-                    color: var(--spec-1-text-color);
-                `
-            case variant === 'spec-2':
-                return css`
-                    color: var(--spec-2-text-color);
-                `
-            case variant === 'spec-3':
-                return css`
-                    color: var(--spec-3-text-color);
-                `
-        }
-    }}
-`
 
 const stepsConf: StepsArray = [
     {
@@ -38,7 +13,9 @@ const stepsConf: StepsArray = [
         title: (
             <>
                 Choose your available now{' '}
-                <StyledBold variant='spec-1'>task mode</StyledBold>
+                <Emphasized classArray={[style.bold, style.bold_one]}>
+                    task mode
+                </Emphasized>
             </>
         ),
         ex: 'For example: Equations',
@@ -48,8 +25,10 @@ const stepsConf: StepsArray = [
         id: 2,
         title: (
             <>
-                <StyledBold variant='spec-2'>Set up</StyledBold> your task mode
-                as you need
+                <Emphasized classArray={[style.bold, style.bold_two]}>
+                    Set up
+                </Emphasized>{' '}
+                your task mode as you need
             </>
         ),
         ex: 'For example: Linear equations',
@@ -60,7 +39,10 @@ const stepsConf: StepsArray = [
         title: (
             <>
                 Start to practice and{' '}
-                <StyledBold variant='spec-3'>just progress</StyledBold> with us!
+                <Emphasized classArray={[style.bold, style.bold_three]}>
+                    just progress
+                </Emphasized>{' '}
+                with us!
             </>
         ),
         ex: "Really, that's all",

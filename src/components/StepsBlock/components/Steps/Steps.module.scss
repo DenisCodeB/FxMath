@@ -1,0 +1,8 @@
+.steps {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 20rem;
+    margin-top: 10rem;
+}
