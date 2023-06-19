@@ -1,0 +1,27 @@
+@use '../../styles/mixins/flex';
+
+.footer {
+    width: 100%;
+    height: 3rem;
+    margin-top: 10rem;
+
+    &__content {
+        @include flex.flexCentralize;
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__source {
+        font-family: var(--ff-L);
+        font-size: var(--fs-20);
+        color: var(--second-text-color);
+    }
+
+    &__year {
+        padding: 0.5rem;
+        font-family: var(--ff-L);
+        font-size: var(--fs-16);
+        color: var(--third-text-color);
+    }
+}

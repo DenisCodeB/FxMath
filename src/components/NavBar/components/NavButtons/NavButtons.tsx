@@ -1,19 +1,15 @@
-import styled from 'styled-components'
+import Image from 'next/image'
 import Button from '../../../../ui/Button/Button'
-import { ReactComponent as CalculationSvg } from '../../../../assets/images/Calculation.svg'
-
-const ButtonsWrap = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
+import CalculationSvg from '../../../../assets/images/Calculation.svg'
+import style from './NavButtons.module.scss'
 
 const NavButtons = () => {
     return (
-        <ButtonsWrap>
+        <div className={style['nav-buttons']}>
             <Button variant='secondary' text='Practice'>
-                <CalculationSvg />
+                <Image src={CalculationSvg} alt='' />
             </Button>
-        </ButtonsWrap>
+        </div>
     )
 }
 

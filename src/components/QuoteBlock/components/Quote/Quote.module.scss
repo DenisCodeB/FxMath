@@ -1,0 +1,26 @@
+@use '../../../../styles/mixins/flex';
+
+.quote {
+    @include flex.flexCentralize;
+    gap: 3rem;
+
+    &__text {
+        font-size: var(--fs-20);
+        font-family: var(--ff-V);
+        color: var(--first-text-color);
+        font-style: italic;
+    }
+
+    &__author {
+        font-size: var(--fs-16);
+        font-family: var(--ff-V);
+        color: var(--second-text-color);
+        text-align: right;
+        margin-top: 1rem;
+    }
+
+    &__image {
+        width: 5rem;
+        height: 5rem;
+    }
+}

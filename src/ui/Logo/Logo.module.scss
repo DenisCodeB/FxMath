@@ -1,0 +1,19 @@
+@use '../../styles/mixins/flex';
+
+.logo {
+    @include flex.flexCentralize;
+
+    text-decoration: none;
+    inset: 100%;
+
+    &__link {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    &__img {
+        display: inline-block;
+        width: 6rem;
+        height: auto;
+    }
+}

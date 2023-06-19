@@ -1,36 +1,18 @@
-import styled from 'styled-components'
 import NavBar from '../../components/NavBar/NavBar'
 import Logo from '../../ui/Logo/Logo'
-import PageWrapper from '../PageWrapper/PageWrapper'
-
-const StyledHeader = styled.header`
-    width: 100%;
-    position: fixed;
-    height: 4rem;
-    top: 0;
-    left: 0;
-    background-color: var(--main-background-color);
-    z-index: 9999;
-    border-bottom: 1px solid hsl(0, 0%, 80%);
-`
-
-const HeaderContent = styled.div`
-    height: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
+import PageWrapper from '../../components/PageWrapper/PageWrapper'
+import style from './Header.module.scss'
 
 const Header = () => {
     return (
-        <StyledHeader id='header'>
+        <div id='header' className={style.header}>
             <PageWrapper>
-                <HeaderContent>
+                <div className={style.header__content}>
                     <Logo />
                     <NavBar />
-                </HeaderContent>
+                </div>
             </PageWrapper>
-        </StyledHeader>
+        </div>
     )
 }
 

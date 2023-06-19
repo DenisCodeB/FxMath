@@ -1,55 +1,39 @@
 import { HTMLProps, ReactNode } from 'react'
-import styled from 'styled-components'
-import {
-    bigButtonStyle,
-    primaryButtonStyle,
-    secondaryButtonStyle,
-} from './styles'
-import { flexCentralize } from '../../styles/templates'
+import c from 'classnames'
+import style from './Button.module.scss'
 
 export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
     children?: ReactNode
-    className?: string
-    type?: 'button' | 'reset' | 'submit' | undefined
+    className?: 'plain' | 'big'
+    type?: 'button' | 'reset' | 'submit'
     disabled?: boolean
     variant: 'primary' | 'secondary'
     text: string
 }
 
-const StyledButton = styled.button<IButtonProps>`
-    ${flexCentralize}
-    cursor: pointer;
-    border-radius: var(--radius-10);
-    font-family: var(--ff-L);
-    font-weight: normal;
-
-    ${({ variant }) =>
-        variant === 'primary' ? primaryButtonStyle : secondaryButtonStyle}
-
-    ${({ className }) => className === 'big' && bigButtonStyle}
-`
-
 const Button = ({
     children,
-    className,
+    className = 'plain',
     type = 'button',
     disabled,
-    variant,
-    ref,
-    as,
+    variant = 'primary',
+    text,
     ...props
 }: IButtonProps) => {
     return (
-        <StyledButton
-            className={className}
+        <button
+            className={c(
+                style.button,
+                style[`button_${className}`],
+                style[`button_${variant}`]
+            )}
             type={type}
             disabled={disabled}
-            variant={variant}
             {...props}
         >
-            {props.text}
+            {text}
             {children}
-        </StyledButton>
+        </button>
     )
 }
 

@@ -1,32 +1,16 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { ReactComponent as Svg } from '../../assets/images/Logo.svg'
-import { flexCentralize } from '../../styles/templates'
+import Link from 'next/link'
+import Image from 'next/image'
+import Svg from '../../assets/images/Logo.svg'
 import { HOME_ROUTE } from '../../utils/routes'
-
-const StyledLogo = styled.div`
-    ${flexCentralize}
-    text-decoration: none;
-    inset: 100%;
-`
-
-const LogoLink = styled(Link)`
-    width: 100%;
-    padding: 0 0.5rem;
-`
-
-const LogoSvg = styled(Svg)`
-    display: inline-block;
-    width: 6rem;
-`
+import style from './Logo.module.scss'
 
 const Logo = () => {
     return (
-        <StyledLogo>
-            <LogoLink to={HOME_ROUTE}>
-                <LogoSvg />
-            </LogoLink>
-        </StyledLogo>
+        <div className={style.logo}>
+            <Link href={HOME_ROUTE} className={style.logo__link}>
+                <Image src={Svg} alt='Logo' className={style.logo__img} />
+            </Link>
+        </div>
     )
 }
 

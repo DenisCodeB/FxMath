@@ -1,0 +1,9 @@
+.steps-block {
+    width: 100%;
+
+    &__title {
+        font-family: var(--ff-M-b);
+        font-size: var(--fs-50);
+        color: var(--second-text-color);
+    }
+}

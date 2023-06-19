@@ -1,20 +1,21 @@
-import { HTMLProps } from 'react'
-import styled, { FlattenSimpleInterpolation } from 'styled-components'
-import { backgroundDefault } from '../../styles/templates'
+import Image, { StaticImageData } from 'next/image'
+import c from 'classnames'
+import { classType } from '@/components/WelcomeBlock/components/FaceImages/helpers/classType'
+import style from './FaceImage.module.scss'
 
-interface IFaceImage extends HTMLProps<HTMLDivElement> {
-    url: string
-    variantStyle: FlattenSimpleInterpolation
+interface IFaceImage {
+    url: StaticImageData
+    className: classType
 }
 
-const StyledFaceImage = styled.div<IFaceImage>`
-    background-image: url(${({ url }) => url});
-    ${backgroundDefault}
-    ${({ variantStyle }) => variantStyle}
-`
-
-const FaceImage = ({ url, ref, as, ...props }: IFaceImage) => {
-    return <StyledFaceImage url={url} {...props} />
+const FaceImage = ({ url, className }: IFaceImage) => {
+    return (
+        <Image
+            className={c(style['face-img'], style[className])}
+            src={url}
+            alt=''
+        />
+    )
 }
 
 export default FaceImage
