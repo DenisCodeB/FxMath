@@ -1,12 +1,7 @@
 import HomeContent from '@/modules/HomeContent'
-import MainWrapper from '@/modules/MainWrapper'
 
 const HomePage = () => {
-    return (
-        <MainWrapper>
-            <HomeContent />
-        </MainWrapper>
-    )
+    return <HomeContent />
 }
 
 export default HomePage

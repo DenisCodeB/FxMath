@@ -3,6 +3,7 @@ import c from 'classnames'
 import { lato, montserrat, montserratBold } from '@/styles/fonts'
 import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
+import MainWrapper from '@/modules/MainWrapper'
 import '../styles/global.scss'
 
 interface IRootLayout {
@@ -21,7 +22,7 @@ const RootLayout = ({ children }: IRootLayout) => {
         >
             <body>
                 <Header />
-                {children}
+                <MainWrapper>{children}</MainWrapper>
                 <Footer />
             </body>
         </html>

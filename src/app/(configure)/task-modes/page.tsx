@@ -1,7 +1,7 @@
 import MainWrapper from '../../../modules/MainWrapper/MainWrapper'
 
 const TaskModesPage = () => {
-    return <MainWrapper>Task modes</MainWrapper>
+    return <h1>Task modes</h1>
 }
 
 export default TaskModesPage
