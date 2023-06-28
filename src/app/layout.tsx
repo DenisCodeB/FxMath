@@ -5,6 +5,7 @@ import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
 import MainWrapper from '@/modules/MainWrapper'
 import '../styles/global.scss'
+import ReduxProvider from '@/redux/ReduxProvider'
 
 interface IRootLayout {
     children: ReactNode
@@ -21,9 +22,11 @@ const RootLayout = ({ children }: IRootLayout) => {
             )}
         >
             <body>
-                <Header />
-                <MainWrapper>{children}</MainWrapper>
-                <Footer />
+                <ReduxProvider>
+                    <Header />
+                    <MainWrapper>{children}</MainWrapper>
+                    <Footer />
+                </ReduxProvider>
             </body>
         </html>
     )
