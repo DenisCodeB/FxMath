@@ -5,7 +5,6 @@ const lato = Lato({
     style: 'normal',
     variable: '--ff-L',
     weight: '400',
-    preload: false,
     subsets: ['latin'],
     display: 'swap',
 })
@@ -14,7 +13,6 @@ const montserrat = Montserrat({
     style: 'normal',
     variable: '--ff-M',
     weight: '400',
-    preload: false,
     subsets: ['latin'],
     display: 'swap'
 
@@ -24,7 +22,6 @@ const montserratBold = Montserrat({
     style: 'normal',
     variable: '--ff-M-b',
     weight: '700',
-    preload: false,
     subsets: ['latin'],
     display: 'swap'
 
