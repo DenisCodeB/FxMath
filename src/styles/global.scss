@@ -1,15 +1,23 @@
 :root {
-    // background colors
+    // main colors
+    --white: white;
+    --black: black;
     --transparent: transparent;
-    --main-background-color: hsl(0, 0%, 97%);
-    --second-background-color: hsl(0, 0%, 98%);
+
+    // background colors
+    --main-background-color: hsl(0, 0%, 15%);
+    --first-background-color: hsla(0, 0%, 20%, 0.7);
+    --second-background-color: hsl(0, 0%, 10%);
+    --third-background-color: hsl(0, 0%, 5%);
+    --fourth-background-color: hsla(0, 0%, 20%, 1);
     --secondary-btn-background-1: hsl(240, 100%, 70%);
 
     // text colors
-    --first-text-color: hsl(0, 0%, 15%);
-    --second-text-color: hsl(0, 0%, 30%);
+    --first-text-color: hsl(0, 0%, 90%);
+    --second-text-color: hsl(0, 0%, 75%);
     --third-text-color: hsl(0, 0%, 50%);
     --fourth-text-color: hsl(0, 0%, 95%);
+    --fifth-text-color: hsl(0, 0%, 30%);
     --spec-1-text-color: hsl(252, 76%, 74%);
     --spec-2-text-color: hsl(20, 56%, 53%);
     --spec-3-text-color: hsl(255, 80%, 57%);
@@ -31,6 +39,7 @@
     --border-dev: 1px solid red;
     --primary-btn-border: 1px solid hsl(0, 0%, 50%);
     --second-btn-border: 1px solid hsl(0, 0%, 80%);
+    --third-btn-border: 1px solid hsl(0, 0%, 20%);
 
     // border radiuses
     --radius-10: 0.625rem;
@@ -38,9 +47,10 @@
     --radius-50: 3.125rem;
 
     // box shadows
-    --first-box-shadow: 0 0 5px 0 hsla(300, 100%, 50%, 0.5);
+    --first-box-shadow: 0px 30px 50px 0px hsla(0, 0%, 50%, 0.1);
     --second-box-shadow: 0 0 30px hsla(0, 0%, 0%, 0.05);
     --third-box-shadow: 0 0 10px 0 hsla(240, 50%, 50%, 0.2);
+    --fourth-box-shadow: 0px 30px 50px 0px hsla(0, 0%, 50%, 0.2);
 }
 
 * {
@@ -52,4 +62,20 @@
 
 body {
     background-color: var(--main-background-color);
+
+    &::-webkit-scrollbar {
+        width: 0.3rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--second-background-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--third-background-color);
+    }
+
+    a {
+        text-decoration: none;
+    }
 }

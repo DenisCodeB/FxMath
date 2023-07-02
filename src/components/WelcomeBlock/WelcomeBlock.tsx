@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Button from '../../ui/Button/Button'
 import ArrowRightTwo from '../../assets/images/ArrowRight2.svg'
-import Ellips from '../../assets/images/Ellips.svg'
 import Headings from './components/Headings/Headings'
 import FaceImages from './components/FaceImages/FaceImages'
 import style from './WelcomeBlock.module.scss'
+import ScrollDown from './components/ScrollDown/ScrollDown'
 
 const WelcomeBlock = () => {
     return (
@@ -18,9 +18,9 @@ const WelcomeBlock = () => {
                 </div>
             </div>
             <div className={style['welcome-block__images']}>
-                <Image src={Ellips} alt='' />
                 <FaceImages />
             </div>
+            <ScrollDown />
         </div>
     )
 }
