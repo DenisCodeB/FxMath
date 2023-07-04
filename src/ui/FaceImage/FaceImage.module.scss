@@ -3,12 +3,21 @@
 
 .face-img {
     @include background.backgroundDefault;
+    background-color: var(--first-background-color);
+    border-radius: var(--radius-30);
+    transition: all 0.2s linear;
+
+    &:hover {
+        background-color: var(--fourth-background-color);
+        transform: scale(1.05);
+    }
 }
 
 .first-img {
     @include width.ratio(150px);
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+    animation: scaling 0.5s linear 0s 1 normal none running;
 }
 
 .second-img {
@@ -31,4 +40,15 @@
     grid-row: 3 / 7;
     grid-column: 2 / 6;
     align-self: center;
+}
+
+@keyframes scaling {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

@@ -12,6 +12,7 @@
     & a {
         transition: all 0.1s linear;
         text-decoration: none;
+        color: var(--second-text-color);
 
         &:visited {
             color: var(--second-text-color);

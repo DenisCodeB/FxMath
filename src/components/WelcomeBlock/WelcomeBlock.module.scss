@@ -1,7 +1,13 @@
+@use '../../styles/mixins/background';
+@use '../../styles/mixins/width';
+
 .welcome-block {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    column-gap: 4rem;
+    row-gap: 0;
+    height: calc(100vh - 4rem);
+    flex-wrap: wrap;
 
     &__title-wrapper {
         flex-basis: 50%;
@@ -15,13 +21,16 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        gap: 2.5rem;
+        gap: 5rem;
     }
 
     &__images {
-        flex-basis: 50%;
+        flex-basis: 40%;
         position: relative;
         z-index: 0;
+        background-image: url('../../assets/images/background1.png');
+        @include background.backgroundDefault;
+        @include width.ratio(80%);
 
         svg {
             margin: 0 auto;

@@ -1,0 +1,24 @@
+@use '../../../../styles/mixins/flex';
+@use '../../../../styles/mixins/text';
+@use '../../../../styles/mixins/width';
+
+.welcome-block {
+    &__scroll-down {
+        width: 100%;
+        @include flex.flexCentralize;
+        flex-direction: column;
+
+        & span {
+            @include text.textStyle(
+                var(--fs-16),
+                var(--ff-L),
+                normal,
+                var(--fifth-text-color)
+            );
+        }
+
+        & img {
+            @include width.ratio(2rem);
+        }
+    }
+}
