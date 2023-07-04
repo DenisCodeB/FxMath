@@ -12,20 +12,4 @@
         font-family: var(--ff-L);
         font-size: var(--fs-20);
     }
-
-    & button {
-        transition: all 0.2s linear;
-
-        & img {
-            transition: all 0.2s linear;
-        }
-
-        &:hover {
-            transform: scale(1.03);
-
-            img {
-                transform: translateX(0.5rem);
-            }
-        }
-    }
 }
