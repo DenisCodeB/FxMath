@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { TASK_MODES_ROUTE } from '@/utils/routes'
+import { PRACTICE_ROUTE } from '@/utils/routes'
 import ArrowRightTwo from '@/assets/images/ArrowRight2.svg'
 import Button from '@/ui/Button/Button'
 import style from './GetStarted.module.scss'
@@ -11,7 +11,7 @@ const GetStarted = () => {
     const router = useRouter()
 
     const handleStartBtnClick = () => {
-        router.push(TASK_MODES_ROUTE)
+        router.push(PRACTICE_ROUTE)
     }
 
     return (
