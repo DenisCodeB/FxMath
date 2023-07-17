@@ -4,8 +4,8 @@ import { lato, montserrat, montserratBold } from '@/styles/fonts'
 import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
 import MainWrapper from '@/modules/MainWrapper'
-import '../styles/global.scss'
 import ReduxProvider from '@/redux/ReduxProvider'
+import '../styles/global.scss'
 
 interface IRootLayout {
     children: ReactNode

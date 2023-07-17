@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const ScrollDown = () => {
     return (
-        <Link href={''} className={style['welcome-block__scroll-down']}>
+        <Link href={'#explore'} className={style['welcome-block__scroll-down']}>
             <span>Scroll to see more</span>
             <Image src={DoubleArrow} alt='' />
         </Link>
