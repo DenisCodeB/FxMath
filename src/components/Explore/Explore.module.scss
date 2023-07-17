@@ -1,0 +1,23 @@
+.explore-wrap {
+    width: 100%;
+}
+
+.sub-heading {
+    font: {
+        size: var(--fs-40);
+        family: var(--ff-M);
+    }
+    color: var(--second-text-color);
+}
+
+.explore {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: stretch;
+    gap: 1rem;
+
+    & > div {
+        border-radius: var(--radius-30);
+        box-shadow: hsla(0, 0%, 10%, 0.5) 0px 7px 29px 0px;
+    }
+}

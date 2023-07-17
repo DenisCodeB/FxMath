@@ -1,0 +1,12 @@
+.fact {
+    display: block;
+    width: 80%;
+    float: right;
+    color: var(--second-text-color);
+    font: {
+        size: var(--fs-40);
+        family: var(--ff-L);
+    }
+    line-height: 3.125rem;
+    text-align: right;
+}
