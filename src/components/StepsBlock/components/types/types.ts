@@ -1,8 +1,9 @@
-import { StaticImageData } from "next/image"
-import { ReactNode } from "react"
+import { StaticImageData } from 'next/image'
+import { ReactNode } from 'react'
 
 export interface IStepInfo {
-    id: number
+    id: 1 | 2 | 3
+    bg: StaticImageData
     title: ReactNode
     ex: string
     img: StaticImageData
