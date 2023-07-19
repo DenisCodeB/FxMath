@@ -11,6 +11,9 @@
     --third-background-color: hsl(0, 0%, 5%);
     --fourth-background-color: hsla(0, 0%, 20%, 1);
     --secondary-btn-background-1: hsl(240, 100%, 70%);
+    --step-1-background-color: hsla(207, 23%, 8%, 1);
+    --step-2-background-color: hsla(196, 85%, 3%, 1);
+    --step-3-background-color: hsla(222, 62%, 3%, 1);
 
     // text colors
     --first-text-color: hsl(0, 0%, 90%);
@@ -18,9 +21,9 @@
     --third-text-color: hsl(0, 0%, 50%);
     --fourth-text-color: hsl(0, 0%, 95%);
     --fifth-text-color: hsl(0, 0%, 30%);
-    --spec-1-text-color: hsl(252, 76%, 74%);
-    --spec-2-text-color: hsl(20, 56%, 53%);
-    --spec-3-text-color: hsl(255, 80%, 57%);
+    --spec-1-text-color: hsla(25, 28%, 45%, 1);
+    --spec-2-text-color: hsla(22, 65%, 40%, 1);
+    --spec-3-text-color: hsla(44, 93%, 77%, 1);
 
     // font families
     --ff-V: Verdana, sans-serif;
@@ -66,6 +69,7 @@ html {
 }
 
 body {
+    transition: background-color 0.5s linear;
     background-color: var(--main-background-color);
 
     &::-webkit-scrollbar {

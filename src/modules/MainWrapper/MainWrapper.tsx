@@ -8,9 +8,9 @@ interface IMain {
 
 const MainWrapper = ({ children }: IMain) => {
     return (
-        <div id='main' className={style['main-wrapper']}>
+        <main id='main' className={style['main-wrapper']}>
             <PageWrapper>{children}</PageWrapper>
-        </div>
+        </main>
     )
 }
 

@@ -8,7 +8,12 @@ const Logo = () => {
     return (
         <div className={style.logo}>
             <Link href={HOME_ROUTE} className={style.logo__link}>
-                <Image src={Svg} alt='Logo' className={style.logo__img} />
+                <Image
+                    priority
+                    src={Svg}
+                    alt='Logo'
+                    className={style.logo__img}
+                />
             </Link>
         </div>
     )
