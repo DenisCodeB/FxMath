@@ -9,7 +9,7 @@ import style from './WelcomeBlock.module.scss'
 
 const WelcomeBlock = () => {
     return (
-        <div className={style['welcome-block']}>
+        <section className={style['welcome-block']}>
             <div className={style['welcome-block__title-wrapper']}>
                 <div className={style['welcome-block__title']}>
                     <Headings />
@@ -23,7 +23,7 @@ const WelcomeBlock = () => {
                 <BackRounds />
             </div>
             <ScrollDown />
-        </div>
+        </section>
     )
 }
 
