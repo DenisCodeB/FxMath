@@ -3,8 +3,9 @@ import Button from '../../ui/Button/Button'
 import ArrowRightTwo from '../../assets/images/ArrowRight2.svg'
 import Headings from './components/Headings/Headings'
 import FaceImages from './components/FaceImages/FaceImages'
-import style from './WelcomeBlock.module.scss'
 import ScrollDown from './components/ScrollDown/ScrollDown'
+import BackRounds from './components/BackRounds/BackRounds'
+import style from './WelcomeBlock.module.scss'
 
 const WelcomeBlock = () => {
     return (
@@ -19,6 +20,7 @@ const WelcomeBlock = () => {
             </div>
             <div className={style['welcome-block__images']}>
                 <FaceImages />
+                <BackRounds />
             </div>
             <ScrollDown />
         </div>

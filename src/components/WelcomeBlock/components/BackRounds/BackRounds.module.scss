@@ -1,0 +1,6 @@
+.back-rounds {
+    display: grid;
+    grid-template-columns: repeat(6, 5rem);
+    grid-template-rows: repeat(6, 5rem);
+    z-index: -1;
+}
