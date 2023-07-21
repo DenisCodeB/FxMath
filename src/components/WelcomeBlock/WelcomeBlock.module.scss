@@ -14,16 +14,6 @@
         padding: 2rem;
     }
 
-    &__title {
-        float: right;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        gap: 5rem;
-    }
-
     &__images {
         flex-basis: 40%;
         position: relative;

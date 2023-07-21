@@ -8,7 +8,9 @@ import style from './StepsBlock.module.scss'
 const StepsBlock = () => {
     return (
         <section className={style['steps-block']}>
-            <H2 className={style['steps-block__title']}>🍵 Get started</H2>
+            <H2 id='get-started' className={style['steps-block__title']}>
+                🍵 Get started
+            </H2>
             <Steps />
             <GetStarted />
         </section>
