@@ -1,7 +1,7 @@
 import MainWrapper from '../../../modules/MainWrapper/MainWrapper'
 
-const PracticePage = () => {
+const PlaygroundPage = () => {
     return <MainWrapper>Let's practice!</MainWrapper>
 }
 
-export default PracticePage
+export default PlaygroundPage
