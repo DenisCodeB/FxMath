@@ -1,0 +1,22 @@
+@use '../../styles/mixins/text';
+
+.content {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+        @include text.textStyle(
+            var(--fs-20),
+            var(--ff-L),
+            normal,
+            var(--first-text-color)
+        );
+        width: 50%;
+    }
+
+    &__img-wrap {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
