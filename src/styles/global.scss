@@ -90,8 +90,12 @@ body {
     &::-webkit-scrollbar-thumb {
         background-color: var(--third-background-color);
     }
+}
 
-    a {
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
 }

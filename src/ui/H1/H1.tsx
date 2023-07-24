@@ -2,7 +2,6 @@ import style from './H1.module.scss'
 
 interface IH1 {
     children: string
-    variant: 'primary' | 'secondary'
 }
 
 const H1 = ({ children }: IH1) => {

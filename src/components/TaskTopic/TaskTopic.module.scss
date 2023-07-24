@@ -1,0 +1,17 @@
+@use '../../styles/mixins/flex';
+
+.task-topic {
+    @include flex.flexCentralize;
+    gap: 2rem;
+
+    &__img {
+        box-sizing: content-box;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    &_reversed {
+        flex-direction: row-reverse;
+    }
+}

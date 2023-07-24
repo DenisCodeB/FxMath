@@ -1,7 +1,13 @@
-import MainWrapper from '../../../modules/MainWrapper/MainWrapper'
+import TaskBody from '@/modules/TaskBody'
+import TaskHeaderConfig from '@/modules/TaskHeaderConfig'
 
 const PlaygroundPage = () => {
-    return <MainWrapper>Let's practice!</MainWrapper>
+    return (
+        <>
+            <TaskHeaderConfig />
+            <TaskBody />
+        </>
+    )
 }
 
 export default PlaygroundPage
