@@ -1,8 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import counterSlice from './features/counterSlice'
+import modalSlice from './features/modalSlice'
 
 const rootReducer = combineReducers({
-    counterSlice,
+    modalSlice,
 })
 
 export { rootReducer }

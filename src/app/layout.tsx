@@ -6,6 +6,7 @@ import Footer from '@/modules/Footer'
 import MainWrapper from '@/modules/MainWrapper'
 import ReduxProvider from '@/redux/ReduxProvider'
 import '../styles/global.scss'
+import ModalFactory from '@/components/Modal/ModalFactory'
 
 interface IRootLayout {
     children: ReactNode
@@ -26,6 +27,7 @@ const RootLayout = ({ children }: IRootLayout) => {
                     <Header />
                     <MainWrapper>{children}</MainWrapper>
                     <Footer />
+                    <ModalFactory />
                 </ReduxProvider>
             </body>
         </html>
