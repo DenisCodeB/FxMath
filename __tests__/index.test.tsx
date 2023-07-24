@@ -1,24 +1,10 @@
-import { jest, describe, test } from '@jest/globals'
-import { render } from '@testing-library/react'
-import { useRouter } from 'next/navigation'
-import HomePage from '@/app/page'
+import '@testing-library/jest-dom'
+import { screen, render } from '@testing-library/react'
+import H1 from '@/ui/H1/H1'
 
-const pushMock = jest.fn<() => >()
-
-const renderHomePage = () => {
-    jest.mock('next/navigation', () => ({
-        useRouter: jest.fn(),
-    }))
-    useRouter.mockReturnValue({
-        push: pushMock,
-    })
-
-    return render(<HomePage />)
-}
-
-describe('Starting test', () => {
-    test('Is app bootstrapped', () => {
-        const { getByRole } = renderHomePage()
-        expect(getByRole('main')).toBeInTheDocument()
+describe('H1 - rendering', () => {
+    it('should show text', () => {
+        render(<H1>Some text...</H1>)
+        expect(screen.getByText('Some text...')).toBeInTheDocument()
     })
 })
