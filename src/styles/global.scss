@@ -33,6 +33,7 @@
     --ff-V: Verdana, sans-serif;
 
     // font sizes
+    --fs-14: 14px;
     --fs-16: 16px;
     --fs-18: 18px;
     --fs-20: 20px;
@@ -76,6 +77,7 @@ html {
 }
 
 body {
+    border-top: 0.01px solid transparent;
     transition: background-color 0.5s linear;
     background-color: var(--main-background-color);
 
