@@ -7,7 +7,7 @@ const Footer = () => {
             <PageWrapper>
                 <div className={style.footer__content}>
                     <p className={style.footer__source}>Open source project</p>
-                    <p className={style.footer__year}>2023 🧸</p>
+                    <p className={style.footer__year}>FxMath, 2023 🧸</p>
                 </div>
             </PageWrapper>
         </footer>

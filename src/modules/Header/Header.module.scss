@@ -7,12 +7,17 @@
     background-color: var(--main-background-color);
     z-index: 9999;
     border-bottom: var(--third-btn-border);
-    transition: background-color 0.5s linear;
+    transition: all 0.5s linear;
 
     &__content {
         height: inherit;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &_hidden {
+        top: -4rem;
+        opacity: 0;
     }
 }
