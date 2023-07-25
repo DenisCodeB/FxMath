@@ -1,0 +1,7 @@
+.playground-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(15rem, 1fr);
+    row-gap: 3rem;
+    min-height: inherit;
+}

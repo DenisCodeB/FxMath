@@ -1,25 +1,22 @@
-import { ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 import c from 'classnames'
-import { lato, montserrat, montserratBold } from '@/styles/fonts'
+import { lato, montserrat, montserratBold, rubik } from '@/styles/fonts'
 import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
 import MainWrapper from '@/modules/MainWrapper'
 import ReduxProvider from '@/redux/ReduxProvider'
-import '../styles/global.scss'
 import ModalFactory from '@/components/Modal/ModalFactory'
+import '../styles/global.scss'
 
-interface IRootLayout {
-    children: ReactNode
-}
-
-const RootLayout = ({ children }: IRootLayout) => {
+const RootLayout = ({ children }: PropsWithChildren) => {
     return (
         <html
             lang='en'
             className={c(
                 lato.variable,
                 montserrat.variable,
-                montserratBold.variable
+                montserratBold.variable,
+                rubik.variable
             )}
         >
             <body>
