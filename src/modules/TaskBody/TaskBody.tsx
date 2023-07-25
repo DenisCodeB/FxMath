@@ -4,7 +4,7 @@ import EquationBlock from '@/components/EquationBlock/EquationBlock'
 
 const TaskBody = () => {
     return (
-        <section>
+        <section className={style['task-body']}>
             <TaskTip />
             <EquationBlock />
         </section>

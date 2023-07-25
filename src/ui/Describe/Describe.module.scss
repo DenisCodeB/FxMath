@@ -11,7 +11,7 @@
 
     &__title {
         @include text.textStyle(
-            var(--fs-20),
+            var(--fs-18),
             var(--ff-M-b),
             normal,
             var(--second-text-color)
@@ -20,7 +20,7 @@
 
     &__description {
         @include text.textStyle(
-            var(--fs-18),
+            var(--fs-16),
             var(--ff-L),
             normal,
             var(--third-text-color)
