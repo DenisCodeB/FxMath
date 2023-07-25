@@ -7,7 +7,7 @@ const lato = Lato({
     variable: '--ff-L',
     weight: '400',
     subsets: ['latin'],
-    // display: 'swap',
+    display: 'swap',
 })
 
 const montserrat = Montserrat({
@@ -15,7 +15,7 @@ const montserrat = Montserrat({
     variable: '--ff-M',
     weight: '400',
     subsets: ['latin'],
-    // display: 'swap'
+    display: 'swap',
 })
 
 const montserratBold = Montserrat({
@@ -23,7 +23,7 @@ const montserratBold = Montserrat({
     variable: '--ff-M-b',
     weight: '700',
     subsets: ['latin'],
-    // display: 'swap'
+    display: 'swap',
 })
 
 const rubik = Rubik({
@@ -31,7 +31,7 @@ const rubik = Rubik({
     variable: '--ff-R',
     weight: '500',
     subsets: ['latin'],
-    // display: 'swap'
+    display: 'swap',
 })
 
 export { lato, montserrat, montserratBold, rubik }
