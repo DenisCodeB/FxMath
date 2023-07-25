@@ -7,8 +7,8 @@ export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
     className?: 'plain' | 'big'
     type?: 'button' | 'reset' | 'submit'
     disabled?: boolean
-    variant: 'primary' | 'secondary'
-    text: string
+    variant: 'primary' | 'secondary' | 'styleless'
+    text?: string
 }
 
 const Button = ({

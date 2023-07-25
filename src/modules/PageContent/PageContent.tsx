@@ -5,10 +5,10 @@ import style from './PageContent.module.scss'
 
 const PageContent = ({ title, text, img }: IPageContent) => {
     return (
-        <div className={style['content-wrapper']}>
+        <section className={style['content-wrapper']}>
             <H2 className={style['content-wrapper__title']}>{title}</H2>
             <ContentBlock text={text} img={img} />
-        </div>
+        </section>
     )
 }
 

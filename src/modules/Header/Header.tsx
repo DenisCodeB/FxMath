@@ -1,11 +1,35 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
+import { useEffect, useRef } from 'react'
+import { PLAYGROUND_ROUTE } from '@/utils/routes'
 import NavBar from '../../components/NavBar/NavBar'
 import Logo from '../../ui/Logo/Logo'
 import PageWrapper from '../../components/PageWrapper/PageWrapper'
 import style from './Header.module.scss'
+import mainStyle from '../MainWrapper/MainWrapper.module.scss'
 
 const Header = () => {
+    const pathname = usePathname()
+    const ref = useRef<HTMLElement>(null)
+
+    useEffect(() => {
+        const header = ref.current
+        const main = document.getElementById('main')
+        const styles = style.header_hidden
+        const mainStyles = mainStyle['main-wrapper_up']
+
+        if (pathname === PLAYGROUND_ROUTE) {
+            header?.classList.add(styles)
+            main?.classList.add(mainStyles)
+        } else {
+            header?.classList.remove(styles)
+            main?.classList.remove(mainStyles)
+        }
+    }, [pathname])
+
     return (
-        <header id='header' className={style.header}>
+        <header ref={ref} id='header' className={style.header}>
             <PageWrapper>
                 <div className={style.header__content}>
                     <Logo />
