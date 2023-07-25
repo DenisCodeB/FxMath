@@ -1,0 +1,12 @@
+.content-wrapper {
+    width: 100%;
+    padding-top: 3rem;
+
+    &__title {
+        font: {
+            size: var(--fs-40);
+            family: var(--ff-M);
+        }
+        color: var(--second-text-color);
+    }
+}

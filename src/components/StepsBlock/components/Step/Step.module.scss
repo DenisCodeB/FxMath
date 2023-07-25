@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 5rem;
-    transition: all .5s ease-out;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
 
     &__body {
         width: 45%;
@@ -11,8 +12,27 @@
 
     &__image {
         width: 50%;
-        height: auto;
-        mix-blend-mode: multiply;
+        height: 25rem;
+        box-shadow: inset 0px 0px 50px 30px var(--main-background-color);
+        background: center / 100% no-repeat;
+        transition: all 0.5s linear;
+
+        &_1 {
+            background-image: url('../../../../assets/images/Step1.png');
+        }
+
+        &_2 {
+            background-image: url('../../../../assets/images/Step2.png');
+        }
+
+        &_3 {
+            background-image: url('../../../../assets/images/Step3.png');
+        }
+
+        &_hidden {
+            opacity: 0;
+            transform: translateX(-10rem);
+        }
     }
 
     &_reversed {
@@ -21,11 +41,24 @@
 
     &_hidden {
         opacity: 0;
-        transform: translateY(5rem);
+        transform: translateX(5rem);
+    }
+
+    &_bg-1 {
+        --main-background-color: var(--step-1-background-color);
+    }
+
+    &_bg-2 {
+        --main-background-color: var(--step-2-background-color);
+    }
+
+    &_bg-3 {
+        --main-background-color: var(--step-3-background-color);
     }
 }
 
 .text {
+    position: relative;
     margin-top: 2rem;
     width: 90%;
 
@@ -33,15 +66,23 @@
         font-family: var(--ff-M);
         font-size: var(--fs-40);
         color: var(--second-text-color);
-        text-align: justify;
     }
 
     &__example {
         margin-top: 1rem;
         font-family: var(--ff-L);
         font-size: var(--fs-18);
-        text-align: right;
         color: var(--third-text-color);
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: auto;
+        transform: translate(50%, -25%);
+        z-index: -1;
     }
 }
 

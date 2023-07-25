@@ -14,6 +14,7 @@ const FaceImage = ({ url, className }: IFaceImage) => {
             className={c(style['face-img'], style[className])}
             src={url}
             alt=''
+            priority={true}
         />
     )
 }

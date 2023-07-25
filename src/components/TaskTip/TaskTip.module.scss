@@ -1,0 +1,17 @@
+@use '../../styles/mixins/text';
+
+.task-tip {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__text {
+        @include text.textStyle(
+            var(--fs-16),
+            var(--ff-L),
+            normal,
+            var(--fifth-text-color)
+        );
+    }
+}

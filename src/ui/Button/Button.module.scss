@@ -42,10 +42,29 @@
         color: var(--fourth-text-color);
         flex-direction: row-reverse;
         gap: 0.375rem;
+        transition: all 0.3s linear;
+
+        & img {
+            transition: all 0.3s linear;
+        }
+
+        &:hover {
+            background-color: var(--step-1-background-color);
+
+            & img {
+                transform: rotateZ(360deg);
+            }
+        }
 
         svg {
             width: 0.875rem;
         }
+    }
+
+    &_styleless {
+        background-color: transparent;
+        width: fit-content;
+        height: fit-content;
     }
 
     &_plain {

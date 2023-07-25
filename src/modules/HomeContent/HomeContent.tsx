@@ -1,5 +1,4 @@
 import Explore from '@/components/Explore/Explore'
-import QuoteBlock from '../../components/Explore/components/QuoteBlock/QuoteBlock'
 import StepsBlock from '../../components/StepsBlock/StepsBlock'
 import WelcomeBlock from '../../components/WelcomeBlock/WelcomeBlock'
 import style from './HomeContent.module.scss'

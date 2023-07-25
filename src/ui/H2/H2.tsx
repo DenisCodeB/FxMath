@@ -1,12 +1,16 @@
-import { ReactNode } from 'react'
+import { HTMLProps, ReactNode } from 'react'
 
-interface IH2 {
+interface IH2 extends HTMLProps<HTMLHeadingElement> {
     children: ReactNode
     className: string
 }
 
-const H2 = ({ children, className }: IH2) => {
-    return <h2 className={className}>{children}</h2>
+const H2 = ({ children, className, ...props }: IH2) => {
+    return (
+        <h2 className={className} {...props}>
+            {children}
+        </h2>
+    )
 }
 
 export default H2

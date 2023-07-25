@@ -1,5 +1,6 @@
 import { Lato } from 'next/font/google'
 import { Montserrat } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 
 const lato = Lato({
     style: 'normal',
@@ -14,8 +15,7 @@ const montserrat = Montserrat({
     variable: '--ff-M',
     weight: '400',
     subsets: ['latin'],
-    display: 'swap'
-
+    display: 'swap',
 })
 
 const montserratBold = Montserrat({
@@ -23,12 +23,15 @@ const montserratBold = Montserrat({
     variable: '--ff-M-b',
     weight: '700',
     subsets: ['latin'],
-    display: 'swap'
-
+    display: 'swap',
 })
 
-export {
-    lato,
-    montserrat,
-    montserratBold,
-}
+const rubik = Rubik({
+    style: 'normal',
+    variable: '--ff-R',
+    weight: '500',
+    subsets: ['latin'],
+    display: 'swap',
+})
+
+export { lato, montserrat, montserratBold, rubik }
