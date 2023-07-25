@@ -15,10 +15,10 @@
     }
 
     &__images {
-        flex-basis: 40%;
+        flex-basis: 45%;
         position: relative;
         z-index: 0;
-        @include width.ratio(80%);
+        @include width.ratio(90%);
 
         svg {
             margin: 0 auto;
