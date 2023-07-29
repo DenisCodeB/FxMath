@@ -1,6 +1,8 @@
 @use '../../styles/mixins/flex';
 
 .quote {
+    z-index: 1;
+
     &__text {
         font-size: var(--fs-20);
         font-family: var(--ff-V);
