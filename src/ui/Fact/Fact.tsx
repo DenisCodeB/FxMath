@@ -1,7 +1,7 @@
 'use client'
 
-import { FACTS_MOCK } from '@/utils/facts'
-import { useRandom } from '@/components/Explore/components/hooks/useRandom'
+import { FACT_API } from '@/utils/routes'
+import { useApiDataFetch } from '@/hooks/useApiDataFetch'
 import style from './Fact.module.scss'
 
 interface IData {
@@ -10,7 +10,7 @@ interface IData {
 }
 
 const Fact = () => {
-    const { fact } = useRandom<IData>(FACTS_MOCK)
+    const { fact } = useApiDataFetch<IData>(FACT_API)
 
     return <span className={style.fact}>{fact}</span>
 }

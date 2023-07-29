@@ -1,4 +1,7 @@
-export const QUOTES_MOCK = [
+import { NextResponse } from 'next/server'
+import { getRandomIntInclusive } from '@/utils/getRandomIntInclusive'
+
+const QUOTES_MOCK = [
     {
         id: 1,
         quote: 'Pure mathematics is, in its way, the poetry of logical ideas.',
@@ -15,3 +18,10 @@ export const QUOTES_MOCK = [
         author: 'Eric Temple Bell',
     },
 ]
+
+export const GET = () => {
+    const randomNumber = getRandomIntInclusive(0, 2)
+    const data = QUOTES_MOCK[randomNumber]
+
+    return NextResponse.json({ ...data })
+}
