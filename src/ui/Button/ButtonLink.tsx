@@ -5,7 +5,6 @@ import style from './Button.module.scss'
 
 interface IButtonLink extends HTMLProps<HTMLAnchorElement> {
     children?: ReactNode
-    className?: 'plain' | 'big'
     variant: 'primary' | 'secondary'
     text: string
     href: string
@@ -13,7 +12,7 @@ interface IButtonLink extends HTMLProps<HTMLAnchorElement> {
 
 const ButtonLink = ({
     children,
-    className = 'plain',
+    className,
     type = 'button',
     variant = 'primary',
     text,
@@ -25,11 +24,7 @@ const ButtonLink = ({
     return (
         <Link
             href={href}
-            className={c(
-                style.button,
-                style[`button_${className}`],
-                style[`button_${variant}`]
-            )}
+            className={c(style.button, style[`button_${variant}`], className)}
             alt=''
             {...props}
         >

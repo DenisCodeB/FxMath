@@ -4,7 +4,7 @@ export const renderEquation = () => {
     const generator = new EquationGenerator()
     const randomFlag = generator.generateRandomNumber(1, 3)
     const equationArray = generator.generateEquation()
-    let solving
+    let solving: string | number = 0
 
     switch (randomFlag) {
         case 1:
@@ -26,5 +26,6 @@ export const renderEquation = () => {
     return {
         answer: solving,
         equation: equationArray.join(''),
+        isRight: false,
     }
 }

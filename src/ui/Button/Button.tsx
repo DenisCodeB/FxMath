@@ -4,7 +4,7 @@ import style from './Button.module.scss'
 
 export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
     children?: ReactNode
-    className?: 'plain' | 'big'
+    className?: string
     type?: 'button' | 'reset' | 'submit'
     disabled?: boolean
     variant: 'primary' | 'secondary' | 'styleless'
@@ -13,7 +13,7 @@ export interface IButtonProps extends HTMLProps<HTMLButtonElement> {
 
 const Button = ({
     children,
-    className = 'plain',
+    className,
     type = 'button',
     disabled,
     variant = 'primary',
@@ -22,11 +22,7 @@ const Button = ({
 }: IButtonProps) => {
     return (
         <button
-            className={c(
-                style.button,
-                style[`button_${className}`],
-                style[`button_${variant}`]
-            )}
+            className={c(style.button, style[`button_${variant}`], className)}
             type={type}
             disabled={disabled}
             {...props}

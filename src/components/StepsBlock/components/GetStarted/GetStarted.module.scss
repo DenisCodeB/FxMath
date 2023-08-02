@@ -12,4 +12,15 @@
         font-family: var(--ff-L);
         font-size: var(--fs-20);
     }
+
+    &__btn {
+        font: {
+            size: var(--fs-25);
+            family: var(--ff-M);
+            weight: bold;
+        }
+        border: var(--second-btn-border);
+        padding: 1rem 2rem;
+        border-radius: var(--radius-30);
+    }
 }
