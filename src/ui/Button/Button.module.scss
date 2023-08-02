@@ -67,15 +67,3 @@
         height: fit-content;
     }
 }
-
-.big {
-    font: {
-        size: var(--fs-25);
-        family: var(--ff-M);
-        weight: bold;
-    }
-    border: var(--second-btn-border);
-    padding: 1rem 2rem;
-    border-radius: var(--radius-30);
-    background-color: red;
-}
