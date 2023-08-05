@@ -17,6 +17,9 @@ const Step = ({ id, bg, title, ex, img }: IStepInfo) => {
         inView1
             ? document.body.classList.add(style[`step_bg-${id}`])
             : document.body.classList.remove(style[`step_bg-${id}`])
+        return () => {
+            document.body.classList.remove(style[`step_bg-${id}`])
+        }
     })
 
     return (

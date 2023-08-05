@@ -8,6 +8,11 @@
     height: calc(100vh - 4rem);
     min-height: 35rem;
     flex-wrap: wrap;
+    transition: all 0.5s linear;
+
+    &_hide {
+        opacity: 0;
+    }
 
     &__title-wrapper {
         flex-basis: 50%;
