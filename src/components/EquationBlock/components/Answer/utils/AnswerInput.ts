@@ -7,6 +7,8 @@ export class AnswerInput {
     }
 
     public clearInput() {
+        console.log(this.input.value)
         this.input.value = 'x='
+        console.log(this.input.value)
     }
 }

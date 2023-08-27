@@ -7,18 +7,12 @@ import Button from '@/ui/Button/Button'
 import Equation from './components/Equation/Equation'
 import style from './EquationBlock.module.scss'
 import Answer from './components/Answer/Answer'
-import { useAppDispatch } from '@/redux/hooks'
-import { generateEquation } from '@/redux/features/equationSlice'
-import { AnswerInput } from './components/Answer/utils/AnswerInput'
+import { useSwitchToNextEquation } from './hooks/useSwitchToNextEquation'
+import { useSwitchToPreviousEquation } from './hooks/useSwitchToPreviousEquation'
 
 const EquationBlock = () => {
-    const dispatch = useAppDispatch()
-
-    const handleClick = () => {
-        dispatch(generateEquation())
-        const input = new AnswerInput()
-        input.clearInput()
-    }
+    const switchToNextEquation = useSwitchToNextEquation()
+    const switchToPreviousEquation = useSwitchToPreviousEquation()
 
     return (
         <div className={style['equation-wrapper']}>
@@ -26,6 +20,7 @@ const EquationBlock = () => {
                 <Button
                     className={style['equation__switch-btn']}
                     variant='styleless'
+                    onClick={switchToPreviousEquation}
                 >
                     <Image src={LongArrowLeft} alt='' />
                 </Button>
@@ -33,7 +28,7 @@ const EquationBlock = () => {
                 <Button
                     className={style['equation__switch-btn']}
                     variant='styleless'
-                    onClick={handleClick}
+                    onClick={switchToNextEquation}
                 >
                     <Image src={LongArrowRight} alt='' />
                 </Button>
