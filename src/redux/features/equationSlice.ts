@@ -34,10 +34,11 @@ const equationSlice = createSlice({
             } else state.isRight = false
         },
         previousEquation: state => {
-            return state.equation !== state.previous.equation &&
-                state.previous.equation
-                ? { ...state, ...state.previous }
-                : state
+            if (state.previous.equation) {
+                state.answer = state.previous.answer
+                state.equation = state.previous.equation
+                state.isRight = state.previous.isRight
+            }
         },
     },
 })
