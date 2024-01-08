@@ -1,18 +1,18 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
-    "plugins": [
-        "@typescript-eslint"
-    ],
+    "plugins": ["@typescript-eslint"],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@next/next/recommended"
     ],
     "rules": {
         "no-console": 1,
         "no-unused-vars": 0,
         "@typescript-eslint/no-unused-vars": 0,
-        "prefer-const": "warn"
+        "prefer-const": "off",
+        "@typescript-eslint/no-explicit-any": 0
     }
 }
