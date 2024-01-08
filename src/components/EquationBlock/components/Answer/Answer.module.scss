@@ -1,0 +1,48 @@
+@use '../../../../styles/mixins/text';
+
+.answer-block {
+    display: flex;
+    gap: 3rem;
+
+    &__answer {
+        background-color: var(--main-background-color);
+        @include text.textStyle(
+            var(--fs-20),
+            var(--ff-L),
+            normal,
+            var(--fifth-text-color)
+        );
+        transition: all 0.3s linear;
+        padding: 0.5rem 1rem;
+        width: 7rem;
+        letter-spacing: 0.2rem;
+        border-radius: var(--radius-50);
+
+        &:focus {
+            background-color: change-color(
+                $color: hsl(0, 0%, 15%),
+                $lightness: 10%
+            );
+            color: var(--third-text-color);
+        }
+    }
+
+    &__check-btn {
+        @include text.textStyle(
+            var(--fs-16),
+            var(--ff-L),
+            normal,
+            var(--fifth-text-color)
+        );
+        transition: all 0.2s linear;
+        padding: 1rem;
+        border-radius: var(--radius-50);
+
+        &:hover {
+            background-color: change-color(
+                $color: hsl(0, 0%, 15%),
+                $lightness: 10%
+            );
+        }
+    }
+}

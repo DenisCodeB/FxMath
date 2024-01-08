@@ -1,5 +1,7 @@
+@use '../../../../styles/mixins/center';
+
 .back-rounds {
-    margin-top: 3rem;
+    @include center.center();
     display: grid;
     grid-template-columns: repeat(6, 5rem);
     grid-template-rows: repeat(6, 5rem);

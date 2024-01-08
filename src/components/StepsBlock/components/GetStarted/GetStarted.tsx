@@ -19,7 +19,7 @@ const GetStarted = () => {
             <p className={style['get-started__text']}>To begin our practice,</p>
             <Button
                 variant='primary'
-                className='big'
+                className={style['get-started__btn']}
                 id='get-started'
                 text='Get Started'
                 onClick={handleStartBtnClick}

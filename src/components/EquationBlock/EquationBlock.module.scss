@@ -6,24 +6,6 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-
-    & button {
-        @include text.textStyle(
-            var(--fs-16),
-            var(--ff-L),
-            normal,
-            var(--fifth-text-color)
-        );
-        transition: all 0.2s linear;
-        padding: 1rem;
-        border-radius: var(--radius-50);
-        opacity: 0.5;
-
-        &:hover {
-            opacity: 1;
-            background-color: var(--first-background-color);
-        }
-    }
 }
 
 .equation {
@@ -35,12 +17,22 @@
     &__task {
         width: 40%;
         @include text.textStyle(
-            var(--fs-50),
+            var(--fs-60),
             var(--ff-R),
             normal,
             var(--second-text-color)
         );
         letter-spacing: 0.5rem;
         text-align: center;
+    }
+
+    &__switch-btn {
+        padding: 2rem;
+        opacity: 0.3;
+        transition: all 0.2s linear;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
