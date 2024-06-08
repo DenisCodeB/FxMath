@@ -12,6 +12,4 @@ const images = new Map<classType, StaticImageData>([
     ['fourth-img', Image4],
 ])
 
-export {
-    images
-}
+export { images }

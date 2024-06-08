@@ -1,4 +1,4 @@
-import { ABOUT_ROUTE, CONTACTS_ROUTE, HOME_ROUTE } from "../../../utils/routes";
+import { ABOUT_ROUTE, CONTACTS_ROUTE, HOME_ROUTE } from '../../../utils/routes'
 
 export const navLinks = new Map<string, string>([
     ['Home', HOME_ROUTE],

@@ -10,13 +10,13 @@ const transformElement = (elem: HTMLImageElement, x: number, y: number) => {
 
 const animateMove = (elem: HTMLImageElement, e: MouseEvent) => {
     window.requestAnimationFrame(() =>
-        transformElement(elem, e.clientX, e.clientY)
+        transformElement(elem, e.clientX, e.clientY),
     )
 }
 
 const resetWhenLeave = (elem: HTMLImageElement) => {
     window.requestAnimationFrame(
-        () => (elem.style.transform = 'rotateX(0) rotateY(0)')
+        () => (elem.style.transform = 'rotateX(0) rotateY(0)'),
     )
 }
 

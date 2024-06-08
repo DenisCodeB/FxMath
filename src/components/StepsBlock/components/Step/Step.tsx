@@ -30,7 +30,7 @@ const Step = ({ id, bg, title, ex, img }: IStepInfo) => {
                 {
                     [style.step_reversed]: id % 2 === 0,
                 },
-                { [style.step_hidden]: !inView1 }
+                { [style.step_hidden]: !inView1 },
             )}
         >
             <div className={style.step__body}>

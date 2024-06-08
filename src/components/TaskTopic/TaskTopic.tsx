@@ -26,7 +26,7 @@ const TaskTopic = ({ id, title, desciption, url }: ITaskTopic) => {
                 openModal({
                     modal: 'taskConfig',
                     info: { title: 'Coming soon' },
-                })
+                }),
             )
     }
     return (

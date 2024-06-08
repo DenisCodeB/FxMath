@@ -16,7 +16,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                 lato.variable,
                 montserrat.variable,
                 montserratBold.variable,
-                rubik.variable
+                rubik.variable,
             )}
         >
             <body>
