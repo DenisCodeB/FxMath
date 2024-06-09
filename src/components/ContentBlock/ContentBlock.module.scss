@@ -7,12 +7,17 @@
 
     &__text {
         @include text.textStyle(
-            var(--fs-20),
+            var(--fs-25),
             var(--ff-L),
             normal,
             var(--first-text-color)
         );
+        line-height: 2rem;
         width: 50%;
+        border-radius: var(--radius-30);
+        padding: 1.5rem;
+        background-color: var(--first-background-color);
+        height: fit-content;
     }
 
     &__img-wrap {
