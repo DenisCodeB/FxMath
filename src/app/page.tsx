@@ -1,5 +1,5 @@
-import HomeContent from '@/modules/HomeContent'
 import { Metadata } from 'next'
+import HomeContent from '@/modules/HomeContent'
 
 export const metadata: Metadata = {
     title: 'FxMath - endless math',

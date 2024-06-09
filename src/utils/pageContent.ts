@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
-import FaceImage5 from '@/assets/images/Image5.jpg'
-import FaceImage6 from '@/assets/images/Image6.jpg'
+import FaceImage5 from '../../public/assets/images/Image5.jpg'
+import FaceImage6 from '../../public/assets/images/Image6.jpg'
 
 export interface IPageContent {
     title: string

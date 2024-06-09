@@ -1,9 +1,9 @@
-FROM node:19.7.0
+FROM node:22.2.0
 
 WORKDIR /app
 
-COPY package*.json .
+COPY package.json .
 
-RUN npm i
+ENV HUSKY=0
 
-CMD ["npm", "start"]
+RUN yarn

@@ -1,5 +1,5 @@
-import { IPageContent } from '@/utils/pageContent'
 import FaceImage from '@/ui/FaceImage/FaceImage'
+import { IPageContent } from '@/utils/pageContent'
 import style from './ContentBlock.module.scss'
 
 type ContentBlock = Omit<IPageContent, 'title'>

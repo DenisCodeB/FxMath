@@ -25,22 +25,22 @@ export const useApiDataFetch = <T>(url: string): T => {
             if (/\/quote/.test(url)) data = obj1
             else if (/\/fact/.test(url)) data = obj2
         },
-        [isLoading, error]
+        [isLoading, error],
     )
 
-    if (isLoading) {
-        toEachRoute(
-            {
-                id: 0,
-                quote: 'Loading',
-                author: 'Loading',
-            },
-            {
-                id: 0,
-                fact: 'Loading',
-            }
-        )
-    }
+    // if (isLoading) {
+    //     toEachRoute(
+    //         {
+    //             id: 0,
+    //             quote: 'Loading',
+    //             author: 'Loading',
+    //         },
+    //         {
+    //             id: 0,
+    //             fact: 'Loading',
+    //         },
+    //     )
+    // }
 
     if (error) {
         toEachRoute(INITIAL_QUOTE, INITIAL_FACT)

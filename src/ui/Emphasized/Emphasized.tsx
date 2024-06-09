@@ -1,5 +1,5 @@
-import c from 'classnames'
 import { ReactNode } from 'react'
+import c from 'classnames'
 
 interface IEmphasized {
     children: ReactNode

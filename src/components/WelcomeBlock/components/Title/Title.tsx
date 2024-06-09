@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import ArrowRightTwo from '../../../../assets/images/ArrowRight2.svg'
 import Button from '@/ui/Button/Button'
+import ArrowRightTwo from '../../../../../public/assets/images/ArrowRight2.svg'
 import Headings from '../Headings/Headings'
 import style from './Title.module.scss'
 

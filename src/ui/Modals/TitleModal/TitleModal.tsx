@@ -1,12 +1,12 @@
 'use client'
-import { usePathname } from 'next/navigation'
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
-import { useAppDispatch, useAppSelector } from '@/redux/hooks'
-import { PLAYGROUND_ROUTE } from '@/utils/routes'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { closeModal } from '@/redux/features/modalSlice'
-import Mark from '@/assets/images/Mark.svg'
+import { useAppDispatch, useAppSelector } from '@/redux/hooks'
 import Button from '@/ui/Button/Button'
+import { PLAYGROUND_ROUTE } from '@/utils/routes'
+import Mark from '../../../../public/assets/images/Mark.svg'
 import style from './TitleModal.module.scss'
 
 const TitleModal = () => {

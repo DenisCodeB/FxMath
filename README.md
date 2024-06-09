@@ -22,4 +22,4 @@ Builds, (re)creates, starts, and attaches to containers for a service. You can u
 
 ### `docker compose exec web bash`
 
-If you want to dive deeper, use it after. So you can see container files and run additional commands inside. 
+If you want to dive deeper, use it after. So you can see container files and run additional commands inside.

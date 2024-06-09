@@ -1,0 +1,25 @@
+#! /usr/bin/env bash
+
+WHITE='\033[0;37m'
+RED='\033[0;31m'
+B_RED='\033[1;31m'
+GREEN='\033[0;32m'
+NO_COLOR='\033[0m'
+YELLOW='\033[0;33m'
+
+current_branch_name=$(git symbolic-ref --short HEAD)    # TDE-1
+branch_name_len=${#current_branch_name}                 # 5
+
+path_to_commit="$(pwd)/.git/COMMIT_EDITMSG"             # path/to/commit/msg/file
+commit_msg=$(cat $path_to_commit)                       # TDE-1: add something
+prefix_commit_msg=${commit_msg:0:$branch_name_len}      # TDE-1
+
+if [[ "$current_branch_name" != "$prefix_commit_msg" ]]; then
+    printf "${RED}[ERROR-1]: ${B_RED}Incorrect commit message!${NO_COLOR}\n\
+${YELLOW}Need help? You should print commit message like this:\n${YELLOW}Template:${NO_COLOR} \
+${WHITE}git commit -m \"branchName-taskNumber: your commit message here\"${NO_COLOR}\n\
+${YELLOW}Example:${NO_COLOR} ${WHITE}git commit -m \"TDE-123: minor bug fixes\"${NO_COLOR}\n"
+    exit 1
+else
+	printf "${GREEN}✔${NO_COLOR} Success! Commit message approved.\n"
+fi

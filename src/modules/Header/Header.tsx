@@ -1,11 +1,11 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import { PLAYGROUND_ROUTE } from '@/utils/routes'
 import NavBar from '../../components/NavBar/NavBar'
-import Logo from '../../ui/Logo/Logo'
 import PageWrapper from '../../components/PageWrapper/PageWrapper'
+import Logo from '../../ui/Logo/Logo'
 import style from './Header.module.scss'
 import mainStyle from '../MainWrapper/MainWrapper.module.scss'
 

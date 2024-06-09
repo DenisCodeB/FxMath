@@ -38,7 +38,7 @@ export class EquationGenerator extends RandomGenerator {
     private defineResult(
         firstNumber: number,
         secondNumber: number,
-        sign: string
+        sign: string,
     ) {
         if (sign === '+') this.thirdNumber = firstNumber + secondNumber
         else this.thirdNumber = firstNumber - secondNumber

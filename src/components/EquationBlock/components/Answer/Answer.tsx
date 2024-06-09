@@ -1,8 +1,8 @@
-import Button from '@/ui/Button/Button'
 import React from 'react'
 import InputMask from 'react-input-mask'
-import style from './Answer.module.scss'
 import { useCheckAnswer } from '../hooks/useCheckAnswer'
+import Button from '@/ui/Button/Button'
+import style from './Answer.module.scss'
 
 const Answer = () => {
     const checkAnswer = useCheckAnswer()

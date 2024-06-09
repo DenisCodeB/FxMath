@@ -1,5 +1,5 @@
-import { rounds } from './dictionary'
 import Round from '@/ui/Round/Round'
+import { rounds } from './dictionary'
 import style from './BackRounds.module.scss'
 
 const BackRounds = () => {

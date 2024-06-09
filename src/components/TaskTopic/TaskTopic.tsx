@@ -1,12 +1,12 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import Image, { StaticImageData } from 'next/image'
 import c from 'classnames'
-import { useAppDispatch } from '@/redux/hooks'
+import Image, { StaticImageData } from 'next/image'
+import { useRouter } from 'next/navigation'
 import { openModal } from '@/redux/features/modalSlice'
-import Describe from '@/ui/Describe/Describe'
+import { useAppDispatch } from '@/redux/hooks'
 import Button from '@/ui/Button/Button'
+import Describe from '@/ui/Describe/Describe'
 import style from './TaskTopic.module.scss'
 
 interface ITaskTopic {
@@ -26,7 +26,7 @@ const TaskTopic = ({ id, title, desciption, url }: ITaskTopic) => {
                 openModal({
                     modal: 'taskConfig',
                     info: { title: 'Coming soon' },
-                })
+                }),
             )
     }
     return (

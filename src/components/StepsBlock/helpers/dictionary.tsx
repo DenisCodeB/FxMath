@@ -1,13 +1,9 @@
-import Step1 from '../../../assets/images/Step1.png'
-import Step2 from '../../../assets/images/Step2.png'
-import Step3 from '../../../assets/images/Step3.png'
-import Poligon1 from '../../../assets/images/poligon1.svg'
-import Poligon2 from '../../../assets/images/poligon2.svg'
-import Poligon3 from '../../../assets/images/poligon3.svg'
+import Emphasized from '@/ui/Emphasized/Emphasized'
+import Poligon1 from '../../../../public/assets/images/poligon1.svg'
+import Poligon2 from '../../../../public/assets/images/poligon2.svg'
+import Poligon3 from '../../../../public/assets/images/poligon3.svg'
 import { IStepInfo } from '../components/types/types'
 import style from '../components/Step/Step.module.scss'
-import Emphasized from '@/ui/Emphasized/Emphasized'
-import Image from 'next/image'
 
 type StepsArray = Array<IStepInfo>
 
@@ -24,7 +20,6 @@ const stepsConf: StepsArray = [
             </>
         ),
         ex: 'For example: Equations',
-        img: Step1,
     },
     {
         id: 2,
@@ -38,7 +33,6 @@ const stepsConf: StepsArray = [
             </>
         ),
         ex: 'For example: Linear equations',
-        img: Step2,
     },
     {
         id: 3,
@@ -53,7 +47,6 @@ const stepsConf: StepsArray = [
             </>
         ),
         ex: "Really, that's all",
-        img: Step3,
     },
 ]
 

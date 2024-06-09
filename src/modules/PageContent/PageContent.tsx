@@ -1,6 +1,6 @@
-import { IPageContent } from '@/utils/pageContent'
 import ContentBlock from '@/components/ContentBlock/ContentBlock'
 import H2 from '@/ui/H2/H2'
+import { IPageContent } from '@/utils/pageContent'
 import style from './PageContent.module.scss'
 
 const PageContent = ({ title, text, img }: IPageContent) => {

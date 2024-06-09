@@ -1,5 +1,5 @@
-import FaceImage from '../../../../ui/FaceImage/FaceImage'
 import { images } from './helpers/faceImages'
+import FaceImage from '../../../../ui/FaceImage/FaceImage'
 import style from './FaceImages.module.scss'
 
 const FaceImages = () => {

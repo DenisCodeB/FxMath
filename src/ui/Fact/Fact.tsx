@@ -1,7 +1,7 @@
 'use client'
 
-import { FACT_API } from '@/utils/routes'
 import { useApiDataFetch } from '@/hooks/useApiDataFetch'
+import { FACT_API } from '@/utils/routes'
 import style from './Fact.module.scss'
 
 interface IData {

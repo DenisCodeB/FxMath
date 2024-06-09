@@ -1,10 +1,10 @@
 'use client'
 
+import { Suspense, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-import HashHeading from '../../../../ui/HashHeading/HashHeading'
 import Quote from '@/ui/Quote/Quote'
+import HashHeading from '../../../../ui/HashHeading/HashHeading'
 import style from './QuoteBlock.module.scss'
-import { useEffect } from 'react'
 
 const QuoteBlock = () => {
     const [vRef, inView] = useInView({
@@ -22,7 +22,9 @@ const QuoteBlock = () => {
                 <HashHeading>#quote</HashHeading>
             </div>
             <div className={style['quote-block__body']}>
-                <Quote />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <Quote />
+                </Suspense>
             </div>
         </div>
     )

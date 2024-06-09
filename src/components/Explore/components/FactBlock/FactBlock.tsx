@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Fact from '@/ui/Fact/Fact'
-import style from './FactBlock.module.scss'
 import HashHeading from '@/ui/HashHeading/HashHeading'
+import style from './FactBlock.module.scss'
 
 const FactBlock = () => {
     const [vRef, inView] = useInView({
@@ -22,7 +22,9 @@ const FactBlock = () => {
                 <HashHeading>#fact</HashHeading>
             </div>
             <div className={style['fact-block__body']}>
-                <Fact />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <Fact />
+                </Suspense>
             </div>
         </div>
     )

@@ -1,10 +1,10 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { PLAYGROUND_ROUTE } from '@/utils/routes'
-import ArrowRightTwo from '@/assets/images/ArrowRight2.svg'
+import { useRouter } from 'next/navigation'
 import Button from '@/ui/Button/Button'
+import { PLAYGROUND_ROUTE } from '@/utils/routes'
+import ArrowRightTwo from '../../../../../public/assets/images/ArrowRight2.svg'
 import style from './GetStarted.module.scss'
 
 const GetStarted = () => {

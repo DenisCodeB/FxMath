@@ -1,6 +1,6 @@
-import { ABOUT_PAGE_CONTENT } from '@/utils/pageContent'
-import PageContent from '@/modules/PageContent'
 import { Metadata } from 'next'
+import PageContent from '@/modules/PageContent'
+import { ABOUT_PAGE_CONTENT } from '@/utils/pageContent'
 
 export const metadata: Metadata = {
     title: 'FxMath - About us',
