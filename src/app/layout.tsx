@@ -1,14 +1,14 @@
-import { PropsWithChildren } from 'react'
 import c from 'classnames'
-import { lato, montserrat, montserratBold, rubik } from '@/styles/fonts'
-import Header from '@/modules/Header'
-import Footer from '@/modules/Footer'
-import MainWrapper from '@/modules/MainWrapper'
-import ReduxProvider from '@/redux/ReduxProvider'
 import ModalFactory from '@/components/Modal/ModalFactory'
+import RootProvider from '@/lib/RootProvider'
+import Footer from '@/modules/Footer'
+import Header from '@/modules/Header'
+import MainWrapper from '@/modules/MainWrapper'
+import { lato, montserrat, montserratBold, rubik } from '@/styles/fonts'
+import { IChild } from '@/types/interfaces'
 import '../styles/global.scss'
 
-const RootLayout = ({ children }: PropsWithChildren) => {
+const RootLayout = ({ children }: IChild) => {
     return (
         <html
             lang='en'
@@ -20,12 +20,12 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             )}
         >
             <body>
-                <ReduxProvider>
+                <RootProvider>
                     <Header />
                     <MainWrapper>{children}</MainWrapper>
                     <Footer />
                     <ModalFactory />
-                </ReduxProvider>
+                </RootProvider>
             </body>
         </html>
     )

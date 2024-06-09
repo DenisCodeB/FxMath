@@ -1,5 +1,5 @@
-import { renderEquation } from '@/components/EquationBlock/utils/generateEquation'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { renderEquation } from '@/components/EquationBlock/utils/generateEquation'
 
 interface IEquationInfo {
     answer: number | string | null
