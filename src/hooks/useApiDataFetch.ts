@@ -28,19 +28,19 @@ export const useApiDataFetch = <T>(url: string): T => {
         [isLoading, error],
     )
 
-    if (isLoading) {
-        toEachRoute(
-            {
-                id: 0,
-                quote: 'Loading',
-                author: 'Loading',
-            },
-            {
-                id: 0,
-                fact: 'Loading',
-            },
-        )
-    }
+    // if (isLoading) {
+    //     toEachRoute(
+    //         {
+    //             id: 0,
+    //             quote: 'Loading',
+    //             author: 'Loading',
+    //         },
+    //         {
+    //             id: 0,
+    //             fact: 'Loading',
+    //         },
+    //     )
+    // }
 
     if (error) {
         toEachRoute(INITIAL_QUOTE, INITIAL_FACT)

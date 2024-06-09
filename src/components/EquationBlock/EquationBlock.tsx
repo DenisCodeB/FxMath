@@ -1,14 +1,14 @@
 'use client'
 
 import Image from 'next/image'
-import LongArrowLeft from '@/assets/images/LongArrowLeft.svg'
-import LongArrowRight from '@/assets/images/LongArrowRight.svg'
-import Button from '@/ui/Button/Button'
-import Equation from './components/Equation/Equation'
-import style from './EquationBlock.module.scss'
-import Answer from './components/Answer/Answer'
 import { useSwitchToNextEquation } from './hooks/useSwitchToNextEquation'
 import { useSwitchToPreviousEquation } from './hooks/useSwitchToPreviousEquation'
+import Button from '@/ui/Button/Button'
+import LongArrowLeft from '../../../public/assets/images/LongArrowLeft.svg'
+import LongArrowRight from '../../../public/assets/images/LongArrowRight.svg'
+import Answer from './components/Answer/Answer'
+import Equation from './components/Equation/Equation'
+import style from './EquationBlock.module.scss'
 
 const EquationBlock = () => {
     const switchToNextEquation = useSwitchToNextEquation()

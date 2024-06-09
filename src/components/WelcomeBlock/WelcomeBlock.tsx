@@ -1,12 +1,12 @@
 'use client'
 
 import c from 'classnames'
+import { InView } from 'react-intersection-observer'
+import BackRounds from './components/BackRounds/BackRounds'
 import FaceImages from './components/FaceImages/FaceImages'
 import ScrollDown from './components/ScrollDown/ScrollDown'
-import BackRounds from './components/BackRounds/BackRounds'
 import Title from './components/Title/Title'
 import style from './WelcomeBlock.module.scss'
-import { InView } from 'react-intersection-observer'
 
 const WelcomeBlock = () => {
     return (

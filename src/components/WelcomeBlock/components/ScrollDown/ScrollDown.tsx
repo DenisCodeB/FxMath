@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import DoubleArrow from '../../../../assets/images/DoubleArrow.svg'
-import style from './ScrollDown.module.scss'
 import Link from 'next/link'
+import DoubleArrow from '../../../../../public/assets/images/DoubleArrow.svg'
+import style from './ScrollDown.module.scss'
 
 const ScrollDown = () => {
     return (

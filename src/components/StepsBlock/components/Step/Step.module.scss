@@ -18,15 +18,15 @@
         transition: all 0.5s linear;
 
         &_1 {
-            background-image: url('../../../../assets/images/Step1.png');
+            background-image: url('../../../../../public/assets/images/Step1.jpg');
         }
 
         &_2 {
-            background-image: url('../../../../assets/images/Step2.png');
+            background-image: url('../../../../../public/assets/images/Step2.jpg');
         }
 
         &_3 {
-            background-image: url('../../../../assets/images/Step3.png');
+            background-image: url('../../../../../public/assets/images/Step3.jpg');
         }
 
         &_hidden {

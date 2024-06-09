@@ -1,5 +1,5 @@
-import Step from '../Step/Step'
 import { stepsConf } from '../../helpers/dictionary'
+import Step from '../Step/Step'
 import style from './Steps.module.scss'
 
 const Steps = () => {

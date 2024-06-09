@@ -1,5 +1,5 @@
-import ArrowLeft from '@/assets/images/ArrowLeft.svg'
-import ExtraMenu from '@/assets/images/ExtraMenu.svg'
+import ArrowLeft from '../../../../public/assets/images/ArrowLeft.svg'
+import ExtraMenu from '../../../../public/assets/images/ExtraMenu.svg'
 
 export const topics = [
     {

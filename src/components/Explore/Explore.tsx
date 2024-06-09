@@ -1,7 +1,7 @@
+import H2 from '@/ui/H2/H2'
+import FactBlock from './components/FactBlock/FactBlock'
 import QuoteBlock from './components/QuoteBlock/QuoteBlock'
 import style from './Explore.module.scss'
-import FactBlock from './components/FactBlock/FactBlock'
-import H2 from '@/ui/H2/H2'
 
 const Explore = () => {
     return (

@@ -1,10 +1,10 @@
 'use client'
 
-import { PropsWithChildren, useEffect } from 'react'
 import { useTransition, animated } from '@react-spring/web'
+import { IChild } from '@/types/interfaces'
 import styles from './ModalWrapper.module.scss'
 
-const ModalWrapper = ({ children }: PropsWithChildren) => {
+const ModalWrapper = ({ children }: IChild) => {
     const transitions = useTransition(children, {
         from: { opacity: 0 },
         enter: { opacity: 1 },

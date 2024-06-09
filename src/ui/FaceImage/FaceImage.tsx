@@ -1,11 +1,11 @@
 'use client'
 
-import Image, { StaticImageData } from 'next/image'
 import { useEffect, useRef } from 'react'
 import c from 'classnames'
+import Image, { StaticImageData } from 'next/image'
 import { classType } from '@/components/WelcomeBlock/components/FaceImages/helpers/classType'
-import style from './FaceImage.module.scss'
 import { animateMouseMove, removeListeners } from './utils/animateMouseMove'
+import style from './FaceImage.module.scss'
 
 interface IFaceImage {
     url: StaticImageData

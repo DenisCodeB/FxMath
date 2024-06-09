@@ -1,13 +1,13 @@
 'use client'
-import Image from 'next/image'
 import { useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
 import c from 'classnames'
+import Image from 'next/image'
+import { useInView } from 'react-intersection-observer'
 import HashHeading from '../../../../ui/HashHeading/HashHeading'
 import { IStepInfo } from '../types/types'
 import style from './Step.module.scss'
 
-const Step = ({ id, bg, title, ex, img }: IStepInfo) => {
+const Step = ({ id, bg, title, ex }: IStepInfo) => {
     const [ref1, inView1] = useInView({
         threshold: 0.3,
         // triggerOnce: true,

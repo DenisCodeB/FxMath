@@ -1,7 +1,7 @@
 import { navLinks } from './helpers/navLinks'
 import ListItem from '@/ui/ListItem/ListItem'
-import style from './NavBar.module.scss'
 import NavButtons from './components/NavButtons/NavButtons'
+import style from './NavBar.module.scss'
 
 const NavBar = () => {
     return (
