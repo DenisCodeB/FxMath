@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY package.json .
 
-RUN yarn
+ENV HUSKY=0
 
-CMD ["yarn", "dev"]
+RUN yarn
