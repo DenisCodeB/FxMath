@@ -1,5 +1,13 @@
-const NotFound = () => {
-    return <h1>404: Not found</h1>
+import { Metadata } from 'next'
+import PageContent from '@/modules/PageContent'
+import { NOT_FOUND_PAGE_CONTENT } from '@/utils/pageContent'
+
+export const metadata: Metadata = {
+    title: 'FxMath - Not Found ;/',
 }
 
-export default NotFound
+const NotFoundPage = () => {
+    return <PageContent {...NOT_FOUND_PAGE_CONTENT} />
+}
+
+export default NotFoundPage
