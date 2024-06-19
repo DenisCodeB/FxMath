@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import c from 'classnames'
+import { usePathname } from 'next/navigation'
 import { navLinks } from './helpers/navLinks'
 import ListItem from '@/ui/ListItem/ListItem'
 import BurgerButton from './components/BurgerButton/BurgerButton'
@@ -10,6 +11,11 @@ import style from './NavBar.module.scss'
 
 const NavBar = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false)
+    const pathname = usePathname()
+
+    useEffect(() => {
+        setToggleMenu(false)
+    }, [pathname])
 
     return (
         <div className={style['navbar-wrapper']}>
