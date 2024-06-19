@@ -1,7 +1,16 @@
+@use '../../styles/mixins/media';
+
 .page-wrapper {
     width: 100%;
     height: 100%;
     max-width: 1280px;
     min-height: inherit;
     margin: 0 auto;
+    padding: 0 2rem;
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    @include media.mediaQuery(500px) {
+        padding: 0 1rem;
+    }
 }

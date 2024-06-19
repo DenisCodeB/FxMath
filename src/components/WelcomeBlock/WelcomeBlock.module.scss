@@ -1,29 +1,69 @@
 @use '../../styles/mixins/width';
+@use '../../styles/mixins/media';
 
 .welcome-block {
-    display: flex;
-    align-items: center;
-    column-gap: 4rem;
-    row-gap: 0;
-    height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(25rem, 30rem) 1fr;
+    height: calc(100vh - 5rem);
     min-height: 30rem;
-    flex-wrap: wrap;
     transition: all 0.5s linear;
+    overflow: visible;
+
+    @include media.mediaQuery(900px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &_hide {
         opacity: 0;
     }
 
+    &__content {
+        width: 100%;
+        grid-area: 1 / 1 / 2 / 2;
+        align-self: flex-end;
+
+        @include media.mediaQuery(900px) {
+            grid-area: none;
+            align-self: center;
+        }
+    }
+}
+
+.describe {
+    width: 100%;
+    display: flex;
+    @include media.mediaQuery(900px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__title-wrapper {
-        flex-basis: 50%;
         padding: 2rem;
+        z-index: 5;
     }
 
     &__images {
-        flex-basis: 45%;
+        width: 100%;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 0;
-        @include width.ratio(80%);
+        @include width.ratio(50%);
+        @include media.mediaQuery(1400px) {
+            scale: 0.8;
+        }
+        @include media.mediaQuery(1024px) {
+            scale: 0.7;
+        }
+        @include media.mediaQuery(900px) {
+            @include media.fluid(width, 320px, 640px, 300px, 900px);
+        }
+        @include media.mediaQuery(500px) {
+            overflow: visible;
+        }
 
         svg {
             margin: 0 auto;

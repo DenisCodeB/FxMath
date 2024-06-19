@@ -1,0 +1,10 @@
+@use '../../../../styles/mixins/media';
+
+.burger {
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    @include media.mediaQuery(768px) {
+        display: block;
+    }
+}

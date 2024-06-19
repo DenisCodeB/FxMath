@@ -8,12 +8,14 @@
     z-index: 9999;
     border-bottom: var(--third-btn-border);
     transition: all 0.5s linear;
+    overflow-y: visible;
 
     &__content {
         height: inherit;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        overflow-y: visible;
     }
 
     &_hidden {

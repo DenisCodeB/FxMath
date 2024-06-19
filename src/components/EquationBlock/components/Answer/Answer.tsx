@@ -1,4 +1,5 @@
 import React from 'react'
+import { IMaskInput } from 'react-imask'
 import InputMask from 'react-input-mask'
 import { useCheckAnswer } from '../hooks/useCheckAnswer'
 import Button from '@/ui/Button/Button'
@@ -9,12 +10,15 @@ const Answer = () => {
 
     return (
         <div className={style['answer-block']}>
-            <InputMask
+            <IMaskInput
                 id='answer-input'
                 className={style['answer-block__answer']}
-                mask={'x=999'}
-                alwaysShowMask
-                maskChar={''}
+                mask='x=#000'
+                lazy={false}
+                placeholderChar=' '
+                definitions={{
+                    '#': /[-0-9]/,
+                }}
             />
             <Button
                 className={style['answer-block__check-btn']}

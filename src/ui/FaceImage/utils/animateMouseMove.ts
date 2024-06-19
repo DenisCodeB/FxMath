@@ -1,17 +1,20 @@
-const transformElement = (elem: HTMLImageElement, x: number, y: number) => {
-    const multiple = 5
-    const box = elem.getBoundingClientRect()
-    const calcX = -(y - box.y - box.height / 2) / multiple
-    const calcY = (x - box.x - box.width / 2) / multiple
+const transformElement = (e: MouseEvent, item: HTMLImageElement) => {
+    let x = Math.abs(item.getBoundingClientRect().x - e.clientX)
+    let y = Math.abs(item.getBoundingClientRect().y - e.clientY)
 
-    elem.style.transform =
-        'rotateX(' + calcX + 'deg) ' + 'rotateY(' + calcY + 'deg)'
+    let halfWidth = item.getBoundingClientRect().width / 2
+    let halfHeight = item.getBoundingClientRect().height / 2
+
+    let calcAngleX = (x - halfWidth) / 3
+    let calcAngleY = (y - halfHeight) / 5
+
+    item.style.perspective = `${halfWidth * 10}px`
+
+    item.style.transform = `rotateY(${calcAngleX}deg) rotateX(${-calcAngleY}deg) scale(1.04)`
 }
 
 const animateMove = (elem: HTMLImageElement, e: MouseEvent) => {
-    window.requestAnimationFrame(() =>
-        transformElement(elem, e.clientX, e.clientY),
-    )
+    window.requestAnimationFrame(() => transformElement(e, elem))
 }
 
 const resetWhenLeave = (elem: HTMLImageElement) => {

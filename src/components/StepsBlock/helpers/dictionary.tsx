@@ -13,13 +13,14 @@ const stepsConf: StepsArray = [
         bg: Poligon1,
         title: (
             <>
-                Choose your available now{' '}
+                Press{' '}
                 <Emphasized classArray={[style.bold, style.bold_one]}>
-                    task mode
-                </Emphasized>
+                    Get Started
+                </Emphasized>{' '}
+                to begin practice mode
             </>
         ),
-        ex: 'For example: Equations',
+        ex: '... or just Playground',
     },
     {
         id: 2,

@@ -1,17 +1,24 @@
+@use '../../../../styles/mixins/media';
+
 .step {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5rem;
+    gap: 5%;
     transition: all 0.5s ease-out;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
 
     &__body {
         width: 45%;
+
+        @include media.mediaQuery(768px) {
+            width: 90%;
+        }
     }
 
     &__image {
-        width: 50%;
+        width: 70%;
         height: 25rem;
         box-shadow: inset 0px 0px 50px 30px var(--main-background-color);
         background: center / 100% no-repeat;
@@ -33,10 +40,29 @@
             opacity: 0;
             transform: translateX(-10rem);
         }
+
+        @include media.mediaQuery(768px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(15%, -25%);
+            opacity: 0.2;
+            height: 30rem;
+            background-size: cover;
+        }
+
+        @include media.mediaQuery(500px) {
+            width: 90%;
+            height: 30rem;
+            transform: translate(15%, -25%);
+        }
     }
 
     &_reversed {
         flex-direction: row-reverse;
+        @include media.mediaQuery(768px) {
+            flex-direction: row;
+        }
     }
 
     &_hidden {
@@ -63,8 +89,10 @@
     width: 90%;
 
     &__action {
-        font-family: var(--ff-M);
-        font-size: var(--fs-40);
+        @include media.fluid(font-size, 30px, 40px, 300px, 900px);
+        font: {
+            family: var(--ff-M);
+        }
         color: var(--second-text-color);
     }
 
@@ -83,6 +111,11 @@
         height: auto;
         transform: translate(50%, -25%);
         z-index: -1;
+
+        @include media.mediaQuery(768px) {
+            width: 85%;
+            transform: translate(-50%, -40%);
+        }
     }
 }
 
@@ -100,5 +133,13 @@
 
     &_three {
         color: var(--spec-3-text-color);
+    }
+}
+
+.hash {
+    @include media.mediaQuery(768px) {
+        @include media.fluid(font-size, 30px, 35px, 320px, 768px);
+        opacity: 0.5;
+        letter-spacing: 0.2rem;
     }
 }

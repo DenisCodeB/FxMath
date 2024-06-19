@@ -1,9 +1,29 @@
-@use '../../../../styles/mixins/center';
+@use '../../../../styles/mixins/media';
 
 .back-rounds {
-    @include center.center();
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    aspect-ratio: 1 / 1;
     display: grid;
     grid-template-columns: repeat(6, 5rem);
     grid-template-rows: repeat(6, 5rem);
     z-index: -1;
+
+    @include media.mediaQuery(900px) {
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 6rem);
+        transform: translate(-50%, -50%) scale(1.5);
+        z-index: -2;
+        opacity: 0.8;
+    }
+
+    @include media.mediaQuery(500px) {
+        grid-template-columns: repeat(6, 4rem);
+        grid-template-rows: repeat(6, 6rem);
+        transform: translate(-50%, -50%) scale(1.5);
+        overflow: visible;
+    }
 }

@@ -1,3 +1,5 @@
+@use '../../../../styles/mixins/media';
+
 .welcome-block {
     &__title {
         float: right;
@@ -7,5 +9,12 @@
         justify-content: space-between;
         align-items: flex-end;
         gap: 5rem;
+
+        @include media.mediaQuery(900px) {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
     }
 }

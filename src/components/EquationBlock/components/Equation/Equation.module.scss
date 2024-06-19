@@ -1,0 +1,21 @@
+@use '../../../../styles/mixins/media';
+@use '../../../../styles/mixins/text';
+
+.task {
+    width: 40%;
+    white-space: nowrap;
+    @include text.textStyle(
+        var(--fs-60),
+        var(--ff-R),
+        normal,
+        var(--second-text-color)
+    );
+    letter-spacing: 0.5rem;
+    text-align: center;
+
+    @include media.mediaQuery(768px) {
+        @include media.fluid(font-size, 50px, 60px, 300px, 768px);
+        width: 100%;
+        order: 2;
+    }
+}

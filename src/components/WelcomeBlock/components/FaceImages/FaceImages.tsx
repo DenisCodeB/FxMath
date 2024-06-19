@@ -6,7 +6,12 @@ const FaceImages = () => {
     return (
         <div className={style['face-images']}>
             {[...images].map((img, i) => (
-                <FaceImage key={i} className={img[0]} url={img[1]} />
+                <FaceImage
+                    key={i}
+                    className={img[0]}
+                    url={img[1]}
+                    animate={style['face-images__face-image']}
+                />
             ))}
         </div>
     )
