@@ -23,7 +23,7 @@ const FactBlock = () => {
             </div>
             <div className={style['fact-block__body']}>
                 <Suspense fallback={<p>Loading...</p>}>
-                    <Fact />
+                    <Fact className={style['adapt-text']} />
                 </Suspense>
             </div>
         </div>

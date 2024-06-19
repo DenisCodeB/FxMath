@@ -7,7 +7,7 @@ const TaskTip = () => {
     const isAnswerRight = useAppSelector(state => state.equationSlice.isRight)
 
     const renderTip = () => {
-        return isAnswerRight ? 'Right' : 'Start typing to write the answer'
+        return isAnswerRight ? 'Right' : 'False'
     }
 
     return (

@@ -1,8 +1,9 @@
 @use '../../styles/mixins/flex';
+@use '../../styles/mixins/media';
 
 .task-topic {
     @include flex.flexCentralize;
-    gap: 2rem;
+    @include media.fluid(gap, 14px, 32px, 400px, 768px);
 
     &__img {
         box-sizing: content-box;

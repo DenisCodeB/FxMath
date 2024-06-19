@@ -1,15 +1,14 @@
+import c from 'classnames'
 import Link from 'next/link'
-import style from './ListItem.module.scss'
-
 interface IListItem {
     text: string
-    className: 'nav-items'
+    className: string
     path: string
 }
 
 const ListItem = ({ text, className, path }: IListItem) => {
     return (
-        <li className={style[className]}>
+        <li className={c(className)}>
             <Link href={path}>{text}</Link>
         </li>
     )

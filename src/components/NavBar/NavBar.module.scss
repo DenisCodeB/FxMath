@@ -1,23 +1,97 @@
 @use '../../styles/mixins/flex';
+@use '../../styles/mixins/text';
+@use '../../styles/mixins/media';
 
 .navbar-wrapper {
     display: flex;
     justify-content: space-between;
     width: 60%;
     float: right;
+    z-index: 9999;
+
+    @include media.mediaQuery(768px) {
+        width: fit-content;
+        justify-content: flex-end;
+        overflow-y: visible;
+    }
 }
 
 .navbar {
-    @include flex.flexCentralize;
     width: 100%;
+    @include flex.flexCentralize;
+    @include media.mediaQuery(768px) {
+        width: fit-content;
+        display: flex;
+        visibility: hidden;
+        position: absolute;
+        top: 4rem;
+        right: -10rem;
+        height: fit-content;
+        z-index: 99999;
+        overflow-y: visible;
+        background-color: var(--fifth-background-color);
+        backdrop-filter: var(--filter-1);
+        height: calc(100vh - 4rem);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 0 1rem;
+        border-left: var(--third-btn-border);
+        transition: all 0.2s linear;
+    }
+
+    &_visible {
+        visibility: visible;
+        right: 0;
+    }
 
     &__list {
         @include flex.flexCentralize;
+
         width: 100%;
         display: flex;
         list-style: none;
         overflow: hidden;
         gap: 20%;
         padding: 0 1rem;
+
+        @include media.mediaQuery(768px) {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            overflow: visible;
+            gap: 2rem;
+            padding: 0;
+        }
+    }
+
+    &__items {
+        @include text.textStyle(
+            var(--fs-18),
+            var(--ff-L),
+            normal,
+            var(--second-text-color)
+        );
+        white-space: nowrap;
+
+        @include media.fluid(font-size, 18px, 20px, 768px, 1400px);
+        @include media.mediaQuery(768px) {
+            @include media.fluid(font-size, 22px, 25px, 300px, 768px);
+        }
+
+        & a {
+            transition: all 0.1s linear;
+            text-decoration: none;
+            color: var(--second-text-color);
+
+            &:visited {
+                color: var(--second-text-color);
+            }
+            &:active,
+            &:hover {
+                color: var(--first-text-color);
+            }
+        }
     }
 }

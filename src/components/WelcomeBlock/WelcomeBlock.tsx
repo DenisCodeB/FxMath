@@ -18,12 +18,19 @@ const WelcomeBlock = () => {
                         [style['welcome-block_hide']]: !inView,
                     })}
                 >
-                    <div className={style['welcome-block__title-wrapper']}>
-                        <Title />
-                    </div>
-                    <div className={style['welcome-block__images']}>
-                        <FaceImages />
-                        <BackRounds />
+                    <div
+                        className={c(
+                            style['welcome-block__content'],
+                            style.describe,
+                        )}
+                    >
+                        <div className={style['describe__title-wrapper']}>
+                            <Title />
+                        </div>
+                        <div className={style['describe__images']}>
+                            <FaceImages />
+                            <BackRounds />
+                        </div>
                     </div>
                     <ScrollDown />
                 </section>

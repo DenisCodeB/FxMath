@@ -1,3 +1,5 @@
+@use '../../styles/mixins/media';
+
 .explore-wrap {
     width: 100%;
 }
@@ -16,9 +18,15 @@
     justify-content: stretch;
     gap: 1rem;
     overflow: hidden;
+    @include media.mediaQuery(768px) {
+        flex-direction: column;
+    }
 
     & > div {
         border-radius: var(--radius-30);
         box-shadow: hsla(0, 0%, 10%, 0.5) 0px 7px 29px 0px;
+        @include media.mediaQuery(768px) {
+            height: 20rem;
+        }
     }
 }

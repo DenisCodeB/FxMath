@@ -1,3 +1,47 @@
+@use '../../../../styles/mixins/media';
+
 .headings {
     text-align: right;
+    z-index: 1;
+
+    &__main-heading {
+        @include media.fluid(font-size, 50px, 70px, 768px, 1400px);
+        font: {
+            family: var(--ff-M-b);
+            weight: bold;
+        }
+        transform: translateX(30%);
+        opacity: 0;
+        animation: smoothH1Appearance 0.6s linear 1s 1 normal forwards;
+        color: var(--first-text-color);
+        @include media.mediaQuery(768px) {
+            @include media.fluid(font-size, 30px, 50px, 300px, 768px);
+        }
+    }
+
+    &__describe {
+        @include media.fluid(font-size, 18px, 25px, 900px, 1400px);
+        font: {
+            family: var(--ff-L);
+            weight: normal;
+        }
+        color: var(--second-text-color);
+        transform: translateY(50%);
+        opacity: 0;
+        animation: smoothPAppearance 0.3s linear 2s 1 normal forwards;
+    }
+}
+
+@keyframes smoothH1Appearance {
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes smoothPAppearance {
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }

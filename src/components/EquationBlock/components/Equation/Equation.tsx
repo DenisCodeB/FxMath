@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { generateEquation } from '@/redux/features/equationSlice'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks'
-import style from '../../EquationBlock.module.scss'
+import style from './Equation.module.scss'
 
 const Equation = () => {
     const equation = useAppSelector(state => state.equationSlice.equation)
@@ -13,7 +13,7 @@ const Equation = () => {
         dispatch(generateEquation())
     }, [])
 
-    return <span className={style.equation__task}>{equation}</span>
+    return <span className={style.task}>{equation}</span>
 }
 
 export default Equation

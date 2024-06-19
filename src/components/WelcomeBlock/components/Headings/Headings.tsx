@@ -1,12 +1,15 @@
-import H1 from '../../../../ui/H1/H1'
-import H3 from '../../../../ui/H3/H3'
+import Heading from '@/ui/Heading/Heading'
 import style from './Headings.module.scss'
 
 const Headings = () => {
     return (
         <div className={style.headings}>
-            <H1>#online_math</H1>
-            <H3>endless practice problems 😊</H3>
+            <Heading role='h1' className={style['headings__main-heading']}>
+                #online_math
+            </Heading>
+            <p className={style.headings__describe}>
+                endless practice problems 😊
+            </p>
         </div>
     )
 }

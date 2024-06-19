@@ -35,7 +35,7 @@ const Step = ({ id, bg, title, ex }: IStepInfo) => {
         >
             <div className={style.step__body}>
                 <div>
-                    <HashHeading>#{id}</HashHeading>
+                    <HashHeading className={style.hash}>#{id}</HashHeading>
                 </div>
                 <div className={style.text}>
                     <Image

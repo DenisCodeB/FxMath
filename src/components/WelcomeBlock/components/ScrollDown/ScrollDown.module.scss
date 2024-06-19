@@ -8,6 +8,8 @@
         @include flex.flexCentralize;
         flex-direction: column;
         padding: 1rem 0;
+        align-self: flex-end;
+        z-index: 2;
 
         & span {
             @include text.textStyle(
@@ -19,7 +21,7 @@
         }
 
         & img {
-            @include width.ratio(2rem);
+            @include width.ratio(1.5rem);
         }
     }
 }

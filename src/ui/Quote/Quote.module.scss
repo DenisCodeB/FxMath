@@ -1,13 +1,16 @@
 @use '../../styles/mixins/flex';
+@use '../../styles/mixins/media';
 
 .quote {
     z-index: 1;
+    backdrop-filter: blur(5px);
 
     &__text {
-        font-size: var(--fs-20);
+        font-size: var(--fs-25);
         font-family: var(--ff-V);
         color: var(--first-text-color);
         text-align: right;
+        padding: 0.5rem;
     }
 
     &__author {
