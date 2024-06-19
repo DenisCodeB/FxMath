@@ -1,17 +1,19 @@
+import React from 'react'
+import { HTMLProps } from 'react'
 import { HeadingTypes } from '@/types/types'
 
-interface IHeading {
-    id?: string
-    className: string
-    children: React.ReactNode
+interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
     role: HeadingTypes
 }
 
-const Heading = ({ id, className, children, role }: IHeading) => {
+const Heading = ({ id, className, children, role = 'p' }: HeadingProps) => {
+    const Head = ({ ...props }: React.HTMLAttributes<HTMLHeadingElement>) =>
+        React.createElement(role, props, children)
+
     return (
-        <h1 role={role} id={id} className={className}>
+        <Head id={id} className={className}>
             {children}
-        </h1>
+        </Head>
     )
 }
 

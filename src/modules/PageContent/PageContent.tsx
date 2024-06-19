@@ -6,7 +6,7 @@ import style from './PageContent.module.scss'
 const PageContent = ({ title, text, img }: IPageContent) => {
     return (
         <section className={style['content-wrapper']}>
-            <Heading role={'h2'} className={style['content-wrapper__title']}>
+            <Heading role={'h1'} className={style['content-wrapper__title']}>
                 {title}
             </Heading>
             <ContentBlock text={text} img={img} />
