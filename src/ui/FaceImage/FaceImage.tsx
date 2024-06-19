@@ -10,7 +10,7 @@ import style from './FaceImage.module.scss'
 interface IFaceImage {
     url: StaticImageData
     className: classType
-    animate: string
+    animate?: string
 }
 
 const FaceImage = ({ url, className, animate }: IFaceImage) => {

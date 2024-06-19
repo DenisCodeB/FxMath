@@ -4,7 +4,7 @@ import style from './HashHeading.module.scss'
 
 interface IHashHeading {
     children: ReactNode
-    className: string
+    className?: string
 }
 
 const HashHeading = ({ children, className }: IHashHeading) => {
