@@ -40,7 +40,7 @@
             }
             &:nth-child(3) {
                 @include width.ratio(5rem);
-                grid-area: 3 / 2 / 7 / 6;
+                grid-area: 5 / 2 / 7 / 6;
                 justify-self: center;
                 align-self: center;
             }
